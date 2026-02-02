@@ -1,0 +1,45 @@
+{
+  "name": "ai-app-builder",
+  "version": "1.0.0",
+  "description": "AI-powered full-stack application generation platform",
+  "private": true,
+  "workspaces": [
+    "Frontend",
+    "server",
+    "workers"
+  ],
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "start": "pnpm run --parallel start",
+    "build": "pnpm run --recursive build",
+    "test": "pnpm run --recursive test",
+    "test:infra": "cd infra && pnpm test",
+    "lint": "pnpm run --recursive lint",
+    "format": "pnpm run --recursive format",
+    "clean": "pnpm run --recursive clean",
+    "setup": "pnpm install && pnpm run --recursive prepare",
+    "demo": "node scripts/dev-start.js",
+    "demo:windows": "scripts\\dev-start.bat",
+    "demo:unix": "bash scripts/dev-start.sh",
+    "validate": "node scripts/validate-setup.js",
+    "validate:docker": "node infra/scripts/validate-docker-deps.js",
+    "docker:cleanup": "infra\\scripts\\cleanup-docker.bat",
+    "docker:cleanup:unix": "bash infra/scripts/cleanup-docker.sh",
+    "docker:build": "infra\\scripts\\build-images.bat",
+    "docker:build:unix": "bash infra/scripts/build-images.sh",
+    "docker:build:backend": "infra\\scripts\\build-images.bat --backend-only",
+    "docker:build:workers": "infra\\scripts\\build-images.bat --workers-only",
+    "docker:test": "docker run -d -p 3000:3000 --name test-backend --env-file server/.env backend:latest && sleep 5 && curl -f http://localhost:3000/health && docker stop test-backend && docker rm test-backend"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "dependencies": {
+    "ioredis": "^5.8.2"
+  }
+}

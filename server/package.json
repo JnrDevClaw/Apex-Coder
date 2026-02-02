@@ -1,0 +1,93 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "AI App Builder Backend API",
+  "main": "app.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start": "fastify start -l info -a 0.0.0.0 -p 3000 app.js",
+    "dev": "fastify start -w -l info -P -a 0.0.0.0 -p 3000 app.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "clean": "rm -rf node_modules coverage",
+    "init-db": "node scripts/init-db.js"
+  },
+  "keywords": [
+    "fastify",
+    "api",
+    "backend",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-api-gateway": "^3.922.0",
+    "@aws-sdk/client-cloudformation": "^3.936.0",
+    "@aws-sdk/client-cloudfront": "^3.922.0",
+    "@aws-sdk/client-cloudtrail": "^3.922.0",
+    "@aws-sdk/client-cloudwatch": "^3.922.0",
+    "@aws-sdk/client-dynamodb": "^3.922.0",
+    "@aws-sdk/client-ecr": "^3.922.0",
+    "@aws-sdk/client-ecs": "^3.922.0",
+    "@aws-sdk/client-iam": "^3.922.0",
+    "@aws-sdk/client-lambda": "^3.922.0",
+    "@aws-sdk/client-s3": "^3.922.0",
+    "@aws-sdk/client-sts": "^3.922.0",
+    "@aws-sdk/lib-dynamodb": "^3.922.0",
+    "@azure-rest/ai-inference": "1.0.0-beta.6",
+    "@azure/core-auth": "^1.10.1",
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/csrf-protection": "^7.1.0",
+    "@fastify/jwt": "^10.0.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/sensible": "^6.0.0",
+    "@fastify/websocket": "^11.2.0",
+    "bcryptjs": "^3.0.2",
+    "bottleneck": "^2.19.5",
+    "bullmq": "^5.34.0",
+    "chokidar": "^4.0.3",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.4.0",
+    "fastify-plugin": "^5.0.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.10",
+    "openai": "^6.9.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "aws-sdk-client-mock": "^4.1.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "supertest": "^7.0.0"
+  },
+
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/test/**",
+      "!app.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  }
+}
