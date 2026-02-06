@@ -4,29 +4,6 @@
       "message": "Update project structure",
       "day": 1,
       "files": [
-        "server/.env.example",
-        "server/app.js",
-        "server/package.json",
-        "workers/index.js",
-        "workers/package.json",
-        ".github/workflows/ci-cd.yml",
-        ".github/workflows/deploy-gcp-cloudrun.yml",
-        ".github/workflows/docker-backend-deploy.yml",
-        ".vscode/settings.json",
-        "README.md",
-        "client/.env.example",
-        "client/.gitignore",
-        "client/.npmrc",
-        "client/.prettierignore",
-        "client/.prettierrc",
-        "client/.vscode/settings.json"
-      ],
-      "order": 3
-    },
-    {
-      "message": "Update project structure",
-      "day": 1,
-      "files": [
         "client/README.md",
         "client/api/aws-connection.js",
         "client/api/github-oauth.js",
