@@ -1,0 +1,1226 @@
+{
+    "batches":  [
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      ".eslintrc.js",
+                                      ".github/workflows/batch-commit.yml",
+                                      ".gitignore",
+                                      ".npmrc",
+                                      ".prettierrc",
+                                      "client/package.json",
+                                      "client/src/app.css",
+                                      "client/src/app.html",
+                                      "client/src/lib/components/ButtonDestructive.svelte",
+                                      "client/src/lib/components/ButtonPrimary.svelte",
+                                      "client/src/lib/components/ButtonSecondary.svelte",
+                                      "client/src/lib/components/ErrorBoundary.svelte",
+                                      "client/src/lib/components/ErrorDisplay.svelte",
+                                      "client/src/lib/components/FormInput.svelte",
+                                      "client/src/lib/components/LoadingSkeleton.svelte",
+                                      "client/src/lib/components/NotificationContainer.svelte"
+                                  ],
+                        "order":  1
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/components/NotificationToast.svelte",
+                                      "client/src/lib/components/PageLayout.svelte",
+                                      "client/src/lib/components/index.js",
+                                      "client/src/routes/+layout.svelte",
+                                      "client/src/routes/+page.svelte",
+                                      "client/src/routes/build/+page.svelte",
+                                      "client/src/routes/build/[id]/+page.svelte",
+                                      "client/src/routes/layout.css",
+                                      "client/src/routes/pipelines/+page.svelte",
+                                      "client/src/routes/questionnaire/+page.svelte",
+                                      "client/src/routes/settings/+page.svelte",
+                                      "client/svelte.config.js",
+                                      "client/tailwind.config.js",
+                                      "client/vite.config.js",
+                                      "package.json",
+                                      "pnpm-workspace.yaml"
+                                  ],
+                        "order":  2
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "server/.env.example",
+                                      "server/app.js",
+                                      "server/package.json",
+                                      "workers/index.js",
+                                      "workers/package.json",
+                                      ".github/workflows/ci-cd.yml",
+                                      ".github/workflows/deploy-gcp-cloudrun.yml",
+                                      ".github/workflows/docker-backend-deploy.yml",
+                                      ".vscode/settings.json",
+                                      "README.md",
+                                      "client/.env.example",
+                                      "client/.gitignore",
+                                      "client/.npmrc",
+                                      "client/.prettierignore",
+                                      "client/.prettierrc",
+                                      "client/.vscode/settings.json"
+                                  ],
+                        "order":  3
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/README.md",
+                                      "client/api/aws-connection.js",
+                                      "client/api/github-oauth.js",
+                                      "client/clear-cache.html",
+                                      "client/eslint.config.js",
+                                      "client/jsconfig.json",
+                                      "client/package-lock.json",
+                                      "client/pnpm-lock.yaml",
+                                      "client/src/app.js",
+                                      "client/src/lib/api/mock-backend.js",
+                                      "client/src/lib/assets/favicon.png",
+                                      "client/src/lib/components/AIProcessingIndicator.svelte",
+                                      "client/src/lib/components/AccessibilitySettings.svelte",
+                                      "client/src/lib/components/AgentPortrait.svelte",
+                                      "client/src/lib/components/BuildPageFAQ.svelte",
+                                      "client/src/lib/components/BuildPageHelp.svelte"
+                                  ],
+                        "order":  4
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/components/BuildProgress.svelte",
+                                      "client/src/lib/components/CancelButton.svelte",
+                                      "client/src/lib/components/CyberPanel.svelte",
+                                      "client/src/lib/components/DeploymentStatus.svelte",
+                                      "client/src/lib/components/DynamicStageRenderer.svelte",
+                                      "client/src/lib/components/ErrorReporter.svelte",
+                                      "client/src/lib/components/GCPConnectionModal.css",
+                                      "client/src/lib/components/GCPConnectionModal.jsx",
+                                      "client/src/lib/components/GCPConnectionModal.svelte",
+                                      "client/src/lib/components/HelpTooltip.svelte",
+                                      "client/src/lib/components/KeyboardShortcutsHelp.svelte",
+                                      "client/src/lib/components/LanguageSelector.svelte",
+                                      "client/src/lib/components/LazyLogViewer.svelte",
+                                      "client/src/lib/components/LazyPipelineDetails.svelte",
+                                      "client/src/lib/components/MobileBottomNav.svelte",
+                                      "client/src/lib/components/MobileNav.svelte"
+                                  ],
+                        "order":  5
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/components/MobilePipelineCard.svelte",
+                                      "client/src/lib/components/MobileStageCard.svelte",
+                                      "client/src/lib/components/PipelineCreationCard.svelte",
+                                      "client/src/lib/components/PipelineDashboard.svelte",
+                                      "client/src/lib/components/PipelineDetailView.svelte",
+                                      "client/src/lib/components/PipelineErrorDisplay.svelte",
+                                      "client/src/lib/components/PipelineStageCard.svelte",
+                                      "client/src/lib/components/PipelineTimeline.svelte",
+                                      "client/src/lib/components/PullToRefresh.svelte",
+                                      "client/src/lib/components/QuestionnaireStage.svelte",
+                                      "client/src/lib/components/RepositoryDisplay.svelte",
+                                      "client/src/lib/components/ResourceDisplay.svelte",
+                                      "client/src/lib/components/ResourceGrid.svelte",
+                                      "client/src/lib/components/ResourceIcon.svelte",
+                                      "client/src/lib/components/ResourceManager.svelte",
+                                      "client/src/lib/components/ResourceMetadata.svelte"
+                                  ],
+                        "order":  6
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/components/ResponsiveLayout.svelte",
+                                      "client/src/lib/components/RetryButton.svelte",
+                                      "client/src/lib/components/SkipToContent.svelte",
+                                      "client/src/lib/components/SpecSummary.svelte",
+                                      "client/src/lib/components/StageConfigurationManager.svelte",
+                                      "client/src/lib/components/StageProgress.svelte",
+                                      "client/src/lib/components/StageRenderer.svelte",
+                                      "client/src/lib/components/StatusBadge.svelte",
+                                      "client/src/lib/components/SwipeableCard.svelte",
+                                      "client/src/lib/components/TerminalLog.svelte",
+                                      "client/src/lib/components/UserModeSelector.svelte",
+                                      "client/src/lib/components/VirtualPipelineList.svelte",
+                                      "client/src/lib/components/questionnaire/AIAssistedInput.svelte",
+                                      "client/src/lib/components/questionnaire/ConversationalStage.svelte",
+                                      "client/src/lib/components/questionnaire/FormField.svelte",
+                                      "client/src/lib/components/questionnaire/FrameworkSelector.svelte"
+                                  ],
+                        "order":  7
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/components/questionnaire/IntelligentClarifierStage.svelte",
+                                      "client/src/lib/components/questionnaire/ProjectContextStage.svelte",
+                                      "client/src/lib/components/questionnaire/ProjectFlowBuilder.svelte",
+                                      "client/src/lib/components/questionnaire/QuestionnaireContainer.svelte",
+                                      "client/src/lib/components/questionnaire/QuestionnaireStage.svelte",
+                                      "client/src/lib/components/questionnaire/SpecSummary.svelte",
+                                      "client/src/lib/components/questionnaire/StageProgress.svelte",
+                                      "client/src/lib/components/questionnaire/UserModeSelector.svelte",
+                                      "client/src/lib/index.js",
+                                      "client/src/lib/schemas/pipeline.js",
+                                      "client/src/lib/schemas/spec.js",
+                                      "client/src/lib/services/analytics.js",
+                                      "client/src/lib/services/authService.js",
+                                      "client/src/lib/services/config.js",
+                                      "client/src/lib/services/errorLogger.js",
+                                      "client/src/lib/services/eventStreamManager.js"
+                                  ],
+                        "order":  8
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/services/gcpApi.js",
+                                      "client/src/lib/services/payloadSchemaHandler.js",
+                                      "client/src/lib/services/pipelineApi.js",
+                                      "client/src/lib/services/stageCompatibility.js",
+                                      "client/src/lib/services/stageRegistry.js",
+                                      "client/src/lib/services/stageValidator.js",
+                                      "client/src/lib/stores/accessibility.js",
+                                      "client/src/lib/stores/auth.js",
+                                      "client/src/lib/stores/mockPipeline.js",
+                                      "client/src/lib/stores/notifications.js",
+                                      "client/src/lib/stores/optimizedPipeline.js",
+                                      "client/src/lib/stores/pipeline.js",
+                                      "client/src/lib/stores/questionnaire.js",
+                                      "client/src/lib/stores/responsive.js",
+                                      "client/src/lib/utils/accessibility.js",
+                                      "client/src/lib/utils/clipboard.js"
+                                  ],
+                        "order":  9
+                    },
+                    {
+                        "message":  "Add utility helper functions",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/lib/utils/componentOptimization.js",
+                                      "client/src/lib/utils/errorHandling.js",
+                                      "client/src/lib/utils/i18n.js",
+                                      "client/src/lib/utils/performance.js",
+                                      "client/src/lib/utils/pipeline.js",
+                                      "client/src/lib/utils/resourceValidation.js",
+                                      "client/src/lib/utils/responsive.js",
+                                      "client/src/lib/utils/serviceWorker.js",
+                                      "client/src/routes/api/config/features/+server.js",
+                                      "client/src/routes/api/waitlist/+server.js",
+                                      "client/src/routes/build-demo/+page.svelte",
+                                      "client/src/routes/error-demo/+page.svelte",
+                                      "client/src/routes/resource-demo/+page.svelte",
+                                      "client/src/routes/responsive-demo/+page.svelte",
+                                      "client/src/routes/stage-demo/+page.svelte",
+                                      "client/src/routes/test-integration/+page.svelte"
+                                  ],
+                        "order":  10
+                    },
+                    {
+                        "message":  "Setup frontend route pages",
+                        "day":  1,
+                        "files":  [
+                                      "client/src/routes/theme-demo/+page.svelte",
+                                      "client/static/_headers",
+                                      "client/static/favicon.png",
+                                      "client/static/offline.html",
+                                      "client/static/robots.txt",
+                                      "client/static/sw.js",
+                                      "client/vercel.json",
+                                      "infra/Dockerfile.backend",
+                                      "infra/Dockerfile.backend.prod",
+                                      "infra/Dockerfile.backend.simple",
+                                      "infra/Dockerfile.frontend.prod",
+                                      "infra/Dockerfile.test-minimal",
+                                      "infra/Dockerfile.workers",
+                                      "infra/Dockerfile.workers.prod",
+                                      "infra/deploy/.env.example",
+                                      "infra/deploy/.eslintrc.js"
+                                  ],
+                        "order":  11
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/.prettierrc",
+                                      "infra/deploy/README.md",
+                                      "infra/deploy/app.js",
+                                      "infra/deploy/config/config-manager.js",
+                                      "infra/deploy/config/enhanced-questionnaire.js",
+                                      "infra/deploy/config/environments/development.js",
+                                      "infra/deploy/config/environments/production.js",
+                                      "infra/deploy/config/model-router-config.js",
+                                      "infra/deploy/config/pricing.json.example",
+                                      "infra/deploy/examples/model-router-usage.js",
+                                      "infra/deploy/models/build.js",
+                                      "infra/deploy/models/cloudformation-stack.js",
+                                      "infra/deploy/models/db.js",
+                                      "infra/deploy/models/deployment.js",
+                                      "infra/deploy/models/index.js",
+                                      "infra/deploy/models/llm-call-log.js"
+                                  ],
+                        "order":  12
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/models/organization.js",
+                                      "infra/deploy/models/project.js",
+                                      "infra/deploy/models/user.js",
+                                      "infra/deploy/package.json",
+                                      "infra/deploy/plugins/README.md",
+                                      "infra/deploy/plugins/auth.js",
+                                      "infra/deploy/plugins/csrf-protection.js",
+                                      "infra/deploy/plugins/encryption.js",
+                                      "infra/deploy/plugins/error-logging.js",
+                                      "infra/deploy/plugins/job-queue.js",
+                                      "infra/deploy/plugins/logging.js",
+                                      "infra/deploy/plugins/mock-auth.js",
+                                      "infra/deploy/plugins/rate-limit.js",
+                                      "infra/deploy/plugins/sensible.js",
+                                      "infra/deploy/plugins/support.js",
+                                      "infra/deploy/plugins/websocket.js"
+                                  ],
+                        "order":  13
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/pnpm-lock.yaml",
+                                      "infra/deploy/routes/README.md",
+                                      "infra/deploy/routes/admin.js",
+                                      "infra/deploy/routes/analytics.js",
+                                      "infra/deploy/routes/audit-dashboard.js",
+                                      "infra/deploy/routes/audit.js",
+                                      "infra/deploy/routes/auth.js",
+                                      "infra/deploy/routes/aws-actions.js",
+                                      "infra/deploy/routes/aws-credentials.js",
+                                      "infra/deploy/routes/aws-setup.js",
+                                      "infra/deploy/routes/builds.js",
+                                      "infra/deploy/routes/correlation.js",
+                                      "infra/deploy/routes/deployments.js",
+                                      "infra/deploy/routes/e2e-validation.js",
+                                      "infra/deploy/routes/example/index.js",
+                                      "infra/deploy/routes/gdpr-compliance.js"
+                                  ],
+                        "order":  14
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/routes/gdpr.js",
+                                      "infra/deploy/routes/github-oauth.js",
+                                      "infra/deploy/routes/github-webhooks.js",
+                                      "infra/deploy/routes/health.js",
+                                      "infra/deploy/routes/log-retention.js",
+                                      "infra/deploy/routes/migration.js",
+                                      "infra/deploy/routes/model-router-metrics.js",
+                                      "infra/deploy/routes/model-router.js",
+                                      "infra/deploy/routes/organizations.js",
+                                      "infra/deploy/routes/pipeline-monitoring.js",
+                                      "infra/deploy/routes/pipelines.js",
+                                      "infra/deploy/routes/projects-simple.js",
+                                      "infra/deploy/routes/projects.js",
+                                      "infra/deploy/routes/questionnaire.js",
+                                      "infra/deploy/routes/root.js",
+                                      "infra/deploy/routes/task-planner.js"
+                                  ],
+                        "order":  15
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/routes/test-integration.js",
+                                      "infra/deploy/services/admin-console.js",
+                                      "infra/deploy/services/agent-roles.js",
+                                      "infra/deploy/services/ai-guidance-engine.js",
+                                      "infra/deploy/services/ai-questionnaire-processor.js",
+                                      "infra/deploy/services/audit-dashboard.js",
+                                      "infra/deploy/services/audit-logger.js",
+                                      "infra/deploy/services/auth.js",
+                                      "infra/deploy/services/aws-action-layer.js",
+                                      "infra/deploy/services/aws-ecs-fargate-deployment.js",
+                                      "infra/deploy/services/aws-iac-deployment.js",
+                                      "infra/deploy/services/aws-lambda-apigateway-deployment.js",
+                                      "infra/deploy/services/aws-s3-cloudfront-deployment.js",
+                                      "infra/deploy/services/cloudformation-service.js",
+                                      "infra/deploy/services/code-generator.js",
+                                      "infra/deploy/services/code-parser.js"
+                                  ],
+                        "order":  16
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/services/correlation-tracker.js",
+                                      "infra/deploy/services/cost-controls.js",
+                                      "infra/deploy/services/deployment-error-logger.js",
+                                      "infra/deploy/services/deployment-status-tracker.js",
+                                      "infra/deploy/services/e2e-demo-validator.js",
+                                      "infra/deploy/services/email-notifications.js",
+                                      "infra/deploy/services/encryption.js",
+                                      "infra/deploy/services/enhanced-spec-processor.js",
+                                      "infra/deploy/services/error-notifier.js",
+                                      "infra/deploy/services/gdpr-compliance.js",
+                                      "infra/deploy/services/github-client.js",
+                                      "infra/deploy/services/job-monitor.js",
+                                      "infra/deploy/services/job-orchestrator.js",
+                                      "infra/deploy/services/job-processor.js",
+                                      "infra/deploy/services/job-queue.js",
+                                      "infra/deploy/services/log-retention.js"
+                                  ],
+                        "order":  17
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/services/metrics-collector.js",
+                                      "infra/deploy/services/mock-ai-service.js",
+                                      "infra/deploy/services/model-router-service.js",
+                                      "infra/deploy/services/model-router.js",
+                                      "infra/deploy/services/model-router/README.md",
+                                      "infra/deploy/services/model-router/cache-manager.js",
+                                      "infra/deploy/services/model-router/connection-pool.js",
+                                      "infra/deploy/services/model-router/cost-tracker.js",
+                                      "infra/deploy/services/model-router/errors.js",
+                                      "infra/deploy/services/model-router/fast-failure.js",
+                                      "infra/deploy/services/model-router/health-monitor.js",
+                                      "infra/deploy/services/model-router/index.js",
+                                      "infra/deploy/services/model-router/initialize-providers.js",
+                                      "infra/deploy/services/model-router/integration-example.js",
+                                      "infra/deploy/services/model-router/logger.js",
+                                      "infra/deploy/services/model-router/metrics-aggregator.js"
+                                  ],
+                        "order":  18
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/services/model-router/metrics-collector.js",
+                                      "infra/deploy/services/model-router/model-router.js",
+                                      "infra/deploy/services/model-router/oauth-manager.js",
+                                      "infra/deploy/services/model-router/performance-monitor.js",
+                                      "infra/deploy/services/model-router/pricing-update-example.js",
+                                      "infra/deploy/services/model-router/provider-registry.js",
+                                      "infra/deploy/services/model-router/rate-limiter-example.js",
+                                      "infra/deploy/services/model-router/rate-limiter-factory.js",
+                                      "infra/deploy/services/model-router/request-queue-backup.js",
+                                      "infra/deploy/services/model-router/request-queue.js",
+                                      "infra/deploy/services/model-router/security-utils.js",
+                                      "infra/deploy/services/model-router/streaming-example.js",
+                                      "infra/deploy/services/model-router/streaming-parser.js",
+                                      "infra/deploy/services/model-router/template-integration-example.js",
+                                      "infra/deploy/services/model-router/template-manager-usage.js",
+                                      "infra/deploy/services/model-router/template-manager.js"
+                                  ],
+                        "order":  19
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  1,
+                        "files":  [
+                                      "infra/deploy/services/model-router/test-basic.js",
+                                      "infra/deploy/services/model-router/test-cache-integration.js",
+                                      "infra/deploy/services/model-router/test-cache.js",
+                                      "infra/deploy/services/model-router/test-cost-integration.js",
+                                      "infra/deploy/services/model-router/test-cost-tracker.js",
+                                      "infra/deploy/services/model-router/test-error-handling.js",
+                                      "infra/deploy/services/model-router/test-fallback-simple.js",
+                                      "infra/deploy/services/model-router/test-fallback.js",
+                                      "infra/deploy/services/model-router/test-health-integration.js",
+                                      "infra/deploy/services/model-router/test-health-monitor.js",
+                                      "infra/deploy/services/model-router/test-hot-reload.js",
+                                      "infra/deploy/services/model-router/test-metrics.js",
+                                      "infra/deploy/services/model-router/test-performance.js",
+                                      "infra/deploy/services/model-router/test-streaming.js",
+                                      "infra/deploy/services/model-router/test-template-manager.js",
+                                      "infra/deploy/services/model-router/test-token-integration.js"
+                                  ],
+                        "order":  20
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  2,
+                        "files":  [
+                                      "infra/deploy/services/model-router/test-token-tracker.js",
+                                      "infra/deploy/services/model-router/token-tracker-usage-example.js",
+                                      "infra/deploy/services/model-router/token-tracker.js",
+                                      "infra/deploy/services/model-router/usage-example.js",
+                                      "infra/deploy/services/monitoring.js",
+                                      "infra/deploy/services/pipeline-migration.js",
+                                      "infra/deploy/services/pipeline-orchestrator.js",
+                                      "infra/deploy/services/prompt-builder.js",
+                                      "infra/deploy/services/prompt-templates-example.js",
+                                      "infra/deploy/services/prompt-templates-integration-example.js",
+                                      "infra/deploy/services/prompt-templates.js",
+                                      "infra/deploy/services/provider-verification.js",
+                                      "infra/deploy/services/providers/anthropic.js",
+                                      "infra/deploy/services/providers/base-provider.js",
+                                      "infra/deploy/services/providers/code-models.js",
+                                      "infra/deploy/services/providers/deepseek-provider.js"
+                                  ],
+                        "order":  1
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  2,
+                        "files":  [
+                                      "infra/deploy/services/providers/deepseek.js",
+                                      "infra/deploy/services/providers/demo.js",
+                                      "infra/deploy/services/providers/electronhub-provider.js",
+                                      "infra/deploy/services/providers/gemini.js",
+                                      "infra/deploy/services/providers/github-models-provider.js",
+                                      "infra/deploy/services/providers/huggingface-inference.js",
+                                      "infra/deploy/services/providers/huggingface-provider.js",
+                                      "infra/deploy/services/providers/huggingface.js",
+                                      "infra/deploy/services/providers/index.js",
+                                      "infra/deploy/services/providers/lightweight-models.js",
+                                      "infra/deploy/services/providers/llama.js",
+                                      "infra/deploy/services/providers/mistral.js",
+                                      "infra/deploy/services/providers/openrouter.js",
+                                      "infra/deploy/services/providers/scaleway.js",
+                                      "infra/deploy/services/providers/vicuna.js",
+                                      "infra/deploy/services/providers/zukijourney-provider.js"
+                                  ],
+                        "order":  2
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  2,
+                        "files":  [
+                                      "infra/deploy/services/providers/zukijourney-rate-limiter.js",
+                                      "infra/deploy/services/questionnaire-audit-logger.js",
+                                      "infra/deploy/services/questionnaire-error-handler.js",
+                                      "infra/deploy/services/questionnaire-validator.js",
+                                      "infra/deploy/services/security-audit-logger.js",
+                                      "infra/deploy/services/service-registry.js",
+                                      "infra/deploy/services/stage-router.js",
+                                      "infra/deploy/services/structured-logger.js",
+                                      "infra/deploy/services/task-planner.js",
+                                      "infra/deploy/services/technical-inference-service.js",
+                                      "infra/deploy/services/telemetry.js",
+                                      "infra/deploy/services/template-engine.js",
+                                      "infra/deploy/templates/github-oidc-stack.yml",
+                                      "infra/deploy/templates/prompts/README.md",
+                                      "infra/deploy/templates/prompts/clarifier.txt",
+                                      "infra/deploy/templates/prompts/code-generator.txt"
+                                  ],
+                        "order":  3
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  2,
+                        "files":  [
+                                      "infra/deploy/templates/prompts/docs-creator.txt",
+                                      "infra/deploy/templates/prompts/file-structure-generator.txt",
+                                      "infra/deploy/templates/prompts/normalizer.txt",
+                                      "infra/deploy/templates/prompts/prompt-builder.txt",
+                                      "infra/deploy/templates/prompts/schema-generator.txt",
+                                      "infra/deploy/templates/prompts/structural-validator.txt",
+                                      "infra/deploy/templates/prompts/validator.txt",
+                                      "infra/deploy/utils/error-handler.js",
+                                      "infra/deploy/utils/error-responses.js",
+                                      "infra/deploy/utils/retry-handler.js",
+                                      "infra/deploy/utils/retry-with-backoff.js",
+                                      "infra/deploy/utils/retry.js",
+                                      "infra/docker-compose.prod.yml",
+                                      "infra/docker-compose.yml",
+                                      "infra/nginx.conf",
+                                      "infra/package.json"
+                                  ],
+                        "order":  4
+                    },
+                    {
+                        "message":  "Update infrastructure configuration",
+                        "day":  2,
+                        "files":  [
+                                      "infra/terraform/compute.tf",
+                                      "infra/terraform/cost-optimization.tf",
+                                      "infra/terraform/database.tf",
+                                      "infra/terraform/lambda/cost_optimizer.py",
+                                      "infra/terraform/main.tf",
+                                      "infra/terraform/monitoring.tf",
+                                      "infra/terraform/outputs.tf",
+                                      "infra/terraform/security.tf",
+                                      "infra/terraform/storage.tf",
+                                      "infra/terraform/terraform.tfvars.example",
+                                      "infra/terraform/variables.tf",
+                                      "infra/terraform/vpc.tf",
+                                      "infra/terraform/waf.tf",
+                                      "pnpm-lock.yaml",
+                                      "server/.eslintrc.js",
+                                      "server/.gitignore"
+                                  ],
+                        "order":  5
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  2,
+                        "files":  [
+                                      "server/.prettierrc",
+                                      "server/README.md",
+                                      "server/config/config-manager.js",
+                                      "server/config/enhanced-questionnaire.js",
+                                      "server/config/environments/development.js",
+                                      "server/config/environments/production.js",
+                                      "server/config/model-router-config.js",
+                                      "server/config/pricing.json.example",
+                                      "server/examples/model-router-usage.js",
+                                      "server/models/build.js",
+                                      "server/models/cloudformation-stack.js",
+                                      "server/models/db.js",
+                                      "server/models/deployment.js",
+                                      "server/models/index.js",
+                                      "server/models/llm-call-log.js",
+                                      "server/models/organization.js"
+                                  ],
+                        "order":  6
+                    },
+                    {
+                        "message":  "Add database models and schema definitions",
+                        "day":  2,
+                        "files":  [
+                                      "server/models/project.js",
+                                      "server/models/user.js",
+                                      "server/package-lock.json",
+                                      "server/plugins/README.md",
+                                      "server/plugins/auth.js",
+                                      "server/plugins/csrf-protection.js",
+                                      "server/plugins/encryption.js",
+                                      "server/plugins/error-logging.js",
+                                      "server/plugins/job-queue.js",
+                                      "server/plugins/logging.js",
+                                      "server/plugins/mock-auth.js",
+                                      "server/plugins/rate-limit.js",
+                                      "server/plugins/sensible.js",
+                                      "server/plugins/support.js",
+                                      "server/plugins/websocket.js",
+                                      "server/routes/README.md"
+                                  ],
+                        "order":  7
+                    },
+                    {
+                        "message":  "Implement API route handlers",
+                        "day":  2,
+                        "files":  [
+                                      "server/routes/admin.js",
+                                      "server/routes/analytics.js",
+                                      "server/routes/audit-dashboard.js",
+                                      "server/routes/audit.js",
+                                      "server/routes/auth.js",
+                                      "server/routes/aws-actions.js",
+                                      "server/routes/aws-credentials.js",
+                                      "server/routes/aws-setup.js",
+                                      "server/routes/builds.js",
+                                      "server/routes/correlation.js",
+                                      "server/routes/deployments.js",
+                                      "server/routes/e2e-validation.js",
+                                      "server/routes/example/index.js",
+                                      "server/routes/gcp-integration.js",
+                                      "server/routes/gdpr-compliance.js",
+                                      "server/routes/gdpr.js"
+                                  ],
+                        "order":  8
+                    },
+                    {
+                        "message":  "Implement API route handlers",
+                        "day":  2,
+                        "files":  [
+                                      "server/routes/github-oauth.js",
+                                      "server/routes/github-webhooks.js",
+                                      "server/routes/health.js",
+                                      "server/routes/log-retention.js",
+                                      "server/routes/migration.js",
+                                      "server/routes/model-router-metrics.js",
+                                      "server/routes/model-router.js",
+                                      "server/routes/organizations.js",
+                                      "server/routes/pipeline-monitoring.js",
+                                      "server/routes/pipelines.js",
+                                      "server/routes/projects-simple.js",
+                                      "server/routes/projects.js",
+                                      "server/routes/questionnaire.js",
+                                      "server/routes/root.js",
+                                      "server/routes/task-planner.js",
+                                      "server/routes/test-integration.js"
+                                  ],
+                        "order":  9
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/admin-console.js",
+                                      "server/services/agent-roles.js",
+                                      "server/services/ai-guidance-engine.js",
+                                      "server/services/ai-questionnaire-processor.js",
+                                      "server/services/artifact-storage.js",
+                                      "server/services/audit-dashboard.js",
+                                      "server/services/audit-logger.js",
+                                      "server/services/auth.js",
+                                      "server/services/aws-action-layer.js",
+                                      "server/services/aws-ecs-fargate-deployment.js",
+                                      "server/services/aws-iac-deployment.js",
+                                      "server/services/aws-lambda-apigateway-deployment.js",
+                                      "server/services/aws-s3-cloudfront-deployment.js",
+                                      "server/services/cloudformation-service.js",
+                                      "server/services/code-generator.js",
+                                      "server/services/code-parser.js"
+                                  ],
+                        "order":  10
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/correlation-tracker.js",
+                                      "server/services/cost-controls.js",
+                                      "server/services/deployment-error-logger.js",
+                                      "server/services/deployment-status-tracker.js",
+                                      "server/services/e2e-demo-validator.js",
+                                      "server/services/email-notifications.js",
+                                      "server/services/encryption.js",
+                                      "server/services/enhanced-spec-processor.js",
+                                      "server/services/error-notifier.js",
+                                      "server/services/gcp-deployment.js",
+                                      "server/services/gdpr-compliance.js",
+                                      "server/services/github-client.js",
+                                      "server/services/job-monitor.js",
+                                      "server/services/job-orchestrator.js",
+                                      "server/services/job-processor.js",
+                                      "server/services/job-queue.js"
+                                  ],
+                        "order":  11
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/log-retention.js",
+                                      "server/services/metrics-collector.js",
+                                      "server/services/mock-ai-service.js",
+                                      "server/services/model-router-service.js",
+                                      "server/services/model-router.js",
+                                      "server/services/model-router/README.md",
+                                      "server/services/model-router/cache-manager.js",
+                                      "server/services/model-router/connection-pool.js",
+                                      "server/services/model-router/cost-tracker.js",
+                                      "server/services/model-router/errors.js",
+                                      "server/services/model-router/fast-failure.js",
+                                      "server/services/model-router/health-monitor.js",
+                                      "server/services/model-router/index.js",
+                                      "server/services/model-router/initialize-providers.js",
+                                      "server/services/model-router/integration-example.js",
+                                      "server/services/model-router/logger.js"
+                                  ],
+                        "order":  12
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/model-router/metrics-aggregator.js",
+                                      "server/services/model-router/metrics-collector.js",
+                                      "server/services/model-router/model-router.js",
+                                      "server/services/model-router/oauth-manager.js",
+                                      "server/services/model-router/performance-monitor.js",
+                                      "server/services/model-router/pricing-update-example.js",
+                                      "server/services/model-router/provider-registry.js",
+                                      "server/services/model-router/rate-limiter-example.js",
+                                      "server/services/model-router/rate-limiter-factory.js",
+                                      "server/services/model-router/request-queue-backup.js",
+                                      "server/services/model-router/request-queue.js",
+                                      "server/services/model-router/security-utils.js",
+                                      "server/services/model-router/streaming-example.js",
+                                      "server/services/model-router/streaming-parser.js",
+                                      "server/services/model-router/template-integration-example.js",
+                                      "server/services/model-router/template-manager-usage.js"
+                                  ],
+                        "order":  13
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/model-router/template-manager.js",
+                                      "server/services/model-router/test-basic.js",
+                                      "server/services/model-router/test-cache-integration.js",
+                                      "server/services/model-router/test-cache.js",
+                                      "server/services/model-router/test-cost-integration.js",
+                                      "server/services/model-router/test-cost-tracker.js",
+                                      "server/services/model-router/test-error-handling.js",
+                                      "server/services/model-router/test-fallback-simple.js",
+                                      "server/services/model-router/test-fallback.js",
+                                      "server/services/model-router/test-health-integration.js",
+                                      "server/services/model-router/test-health-monitor.js",
+                                      "server/services/model-router/test-hot-reload.js",
+                                      "server/services/model-router/test-metrics.js",
+                                      "server/services/model-router/test-performance.js",
+                                      "server/services/model-router/test-streaming.js",
+                                      "server/services/model-router/test-template-manager.js"
+                                  ],
+                        "order":  14
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/model-router/test-token-integration.js",
+                                      "server/services/model-router/test-token-tracker.js",
+                                      "server/services/model-router/token-tracker-usage-example.js",
+                                      "server/services/model-router/token-tracker.js",
+                                      "server/services/model-router/usage-example.js",
+                                      "server/services/monitoring.js",
+                                      "server/services/pipeline-migration.js",
+                                      "server/services/pipeline-orchestrator.js",
+                                      "server/services/prompt-builder.js",
+                                      "server/services/prompt-templates-example.js",
+                                      "server/services/prompt-templates-integration-example.js",
+                                      "server/services/prompt-templates.js",
+                                      "server/services/provider-verification.js",
+                                      "server/services/providers/anthropic.js",
+                                      "server/services/providers/base-provider.js",
+                                      "server/services/providers/code-models.js"
+                                  ],
+                        "order":  15
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/providers/deepseek-provider.js",
+                                      "server/services/providers/deepseek.js",
+                                      "server/services/providers/demo.js",
+                                      "server/services/providers/electronhub-provider.js",
+                                      "server/services/providers/gemini.js",
+                                      "server/services/providers/github-models-provider.js",
+                                      "server/services/providers/huggingface-inference.js",
+                                      "server/services/providers/huggingface-provider.js",
+                                      "server/services/providers/huggingface.js",
+                                      "server/services/providers/index.js",
+                                      "server/services/providers/lightweight-models.js",
+                                      "server/services/providers/llama.js",
+                                      "server/services/providers/mistral.js",
+                                      "server/services/providers/openrouter.js",
+                                      "server/services/providers/scaleway.js",
+                                      "server/services/providers/vicuna.js"
+                                  ],
+                        "order":  16
+                    },
+                    {
+                        "message":  "Enhance backend service layer logic",
+                        "day":  2,
+                        "files":  [
+                                      "server/services/providers/zukijourney-provider.js",
+                                      "server/services/providers/zukijourney-rate-limiter.js",
+                                      "server/services/questionnaire-audit-logger.js",
+                                      "server/services/questionnaire-error-handler.js",
+                                      "server/services/questionnaire-validator.js",
+                                      "server/services/security-audit-logger.js",
+                                      "server/services/service-registry.js",
+                                      "server/services/stage-router.js",
+                                      "server/services/structured-logger.js",
+                                      "server/services/task-planner.js",
+                                      "server/services/technical-inference-service.js",
+                                      "server/services/telemetry.js",
+                                      "server/services/template-engine.js",
+                                      "server/templates/github-oidc-stack.yml",
+                                      "server/templates/prompts/README.md",
+                                      "server/templates/prompts/clarifier.txt"
+                                  ],
+                        "order":  17
+                    },
+                    {
+                        "message":  "Update project structure",
+                        "day":  2,
+                        "files":  [
+                                      "server/templates/prompts/code-generator.txt",
+                                      "server/templates/prompts/docs-creator.txt",
+                                      "server/templates/prompts/file-structure-generator.txt",
+                                      "server/templates/prompts/normalizer.txt",
+                                      "server/templates/prompts/prompt-builder.txt",
+                                      "server/templates/prompts/schema-generator.txt",
+                                      "server/templates/prompts/structural-validator.txt",
+                                      "server/templates/prompts/validator.txt",
+                                      "server/test_output.txt",
+                                      "server/test_output2.txt",
+                                      "server/test_output3.txt",
+                                      "server/test_output4.txt",
+                                      "server/test_output5.txt",
+                                      "server/test_output6.txt",
+                                      "server/test_output7.txt",
+                                      "server/utils/error-handler.js"
+                                  ],
+                        "order":  18
+                    },
+                    {
+                        "message":  "Add utility helper functions",
+                        "day":  2,
+                        "files":  [
+                                      "server/utils/error-responses.js",
+                                      "server/utils/retry-handler.js",
+                                      "server/utils/retry-with-backoff.js",
+                                      "server/utils/retry.js",
+                                      "server/work/sim-project-1/specs/specs.json",
+                                      "start-dev.js",
+                                      "workers/.env.example",
+                                      "workers/.eslintrc.js",
+                                      "workers/.prettierrc",
+                                      "workers/package-lock.json",
+                                      "workers/services/artifact-storage.js",
+                                      "workers/services/deployment-orchestrator.js",
+                                      "workers/services/github-repo-service.js",
+                                      "workers/services/job-executor.js",
+                                      "workers/services/log-streaming.js",
+                                      "workers/services/pipeline-stage-handlers.js"
+                                  ],
+                        "order":  19
+                    },
+                    {
+                        "message":  "Configure background job workers",
+                        "day":  2,
+                        "files":  [
+                                      "workers/services/self-fix-loop.js",
+                                      "workers/services/test-failure-detector.js",
+                                      "workers/services/worker-pool.js",
+                                      "workers/services/workflow-generator.js",
+                                      "workers/templates/worker.js",
+                                      "workers/utils/retry.js"
+                                  ],
+                        "order":  20
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "client/src/lib/utils/performance.test.js",
+                                      "docs/README.md",
+                                      "docs/api/README.md",
+                                      "docs/deployment-automation/README.md",
+                                      "docs/developer/README.md",
+                                      "docs/model-router/README.md",
+                                      "docs/user/README.md",
+                                      "infra/deploy/test/auth-security.test.js",
+                                      "infra/deploy/test/helper.js"
+                                  ],
+                        "order":  1
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/integration/aws-action-layer-integration.test.js",
+                                      "infra/deploy/test/integration/aws-credentials-validation.test.js",
+                                      "infra/deploy/test/integration/cloudformation-stack-creation.test.js",
+                                      "infra/deploy/test/integration/email-notifications-integration.test.js",
+                                      "infra/deploy/test/integration/huggingface-integration.test.js",
+                                      "infra/deploy/test/integration/provider-verification-integration.test.js",
+                                      "infra/deploy/test/integration/questionnaire-audit-integration.test.js",
+                                      "infra/deploy/test/integration/task-planning-integration.test.js",
+                                      "infra/deploy/test/manual/verify-cloudformation-stack.js"
+                                  ],
+                        "order":  2
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/models/build.test.js",
+                                      "infra/deploy/test/models/db.test.js",
+                                      "infra/deploy/test/models/organization.test.js",
+                                      "infra/deploy/test/models/project-sharing.test.js",
+                                      "infra/deploy/test/models/project.test.js",
+                                      "infra/deploy/test/models/user.test.js",
+                                      "infra/deploy/test/plugins/auth-load.test.js",
+                                      "infra/deploy/test/plugins/auth-simple.test.js",
+                                      "infra/deploy/test/plugins/auth.test.js"
+                                  ],
+                        "order":  3
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/plugins/support.test.js",
+                                      "infra/deploy/test/routes/aws-actions.test.js",
+                                      "infra/deploy/test/routes/aws-credentials.test.js",
+                                      "infra/deploy/test/routes/aws-setup.test.js",
+                                      "infra/deploy/test/routes/e2e-validation.test.js",
+                                      "infra/deploy/test/routes/example.test.js",
+                                      "infra/deploy/test/routes/github-oauth.test.js",
+                                      "infra/deploy/test/routes/model-router.test.js",
+                                      "infra/deploy/test/routes/projects-deploy.test.js"
+                                  ],
+                        "order":  4
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/routes/root.test.js",
+                                      "infra/deploy/test/services/admin-console-comprehensive.test.js",
+                                      "infra/deploy/test/services/admin-console.test.js",
+                                      "infra/deploy/test/services/artifact-persistence.test.js",
+                                      "infra/deploy/test/services/audit-logger.test.js",
+                                      "infra/deploy/test/services/auth-project-sharing.test.js",
+                                      "infra/deploy/test/services/auth.test.js",
+                                      "infra/deploy/test/services/aws-action-layer.test.js",
+                                      "infra/deploy/test/services/aws-deployment-stage.test.js"
+                                  ],
+                        "order":  5
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/services/clarifier-batch-qa.test.js",
+                                      "infra/deploy/test/services/cloudformation-service.test.js",
+                                      "infra/deploy/test/services/code-generation-integration.test.js",
+                                      "infra/deploy/test/services/cost-controls.test.js",
+                                      "infra/deploy/test/services/deepseek-electronhub.test.js",
+                                      "infra/deploy/test/services/e2e-demo-validator.test.js",
+                                      "infra/deploy/test/services/email-notifications.test.js",
+                                      "infra/deploy/test/services/error-handling-integration.test.js",
+                                      "infra/deploy/test/services/file-structure-creation.test.js"
+                                  ],
+                        "order":  6
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/services/github-models-provider.test.js",
+                                      "infra/deploy/test/services/huggingface-inference.test.js",
+                                      "infra/deploy/test/services/huggingface-provider.test.js",
+                                      "infra/deploy/test/services/job-orchestrator.test.js",
+                                      "infra/deploy/test/services/job-processor.test.js",
+                                      "infra/deploy/test/services/job-queue.test.js",
+                                      "infra/deploy/test/services/log-retention.test.js",
+                                      "infra/deploy/test/services/metrics-collector.test.js",
+                                      "infra/deploy/test/services/model-router-initialization.test.js"
+                                  ],
+                        "order":  7
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/services/model-router.test.js",
+                                      "infra/deploy/test/services/monitoring.test.js",
+                                      "infra/deploy/test/services/pipeline-e2e.test.js",
+                                      "infra/deploy/test/services/pipeline-failure-recovery.test.js",
+                                      "infra/deploy/test/services/pipeline-orchestrator-retry-simple.test.js",
+                                      "infra/deploy/test/services/pipeline-orchestrator-retry.test.js",
+                                      "infra/deploy/test/services/pipeline-stage-integration.test.js",
+                                      "infra/deploy/test/services/prompt-templates.test.js",
+                                      "infra/deploy/test/services/provider-verification.test.js"
+                                  ],
+                        "order":  8
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/deploy/test/services/redis-integration.test.js",
+                                      "infra/deploy/test/services/repo-creation-stage.test.js",
+                                      "infra/deploy/test/services/security-audit-logger.test.js",
+                                      "infra/deploy/test/services/stage-error-recovery.test.js",
+                                      "infra/deploy/test/services/structured-logger.test.js",
+                                      "infra/deploy/test/services/task-planner.test.js",
+                                      "infra/deploy/test/services/telemetry.test.js",
+                                      "infra/deploy/test/services/zukijourney-provider.test.js",
+                                      "infra/test/backup-recovery.test.js"
+                                  ],
+                        "order":  9
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "infra/test/deployment.test.js",
+                                      "infra/test/helper.js",
+                                      "infra/test/infrastructure.test.js",
+                                      "infra/test/integration.test.js",
+                                      "infra/test/monitoring.test.js",
+                                      "infra/test/run-tests.sh",
+                                      "server/test/auth-security.test.js",
+                                      "server/test/helper.js",
+                                      "server/test/integration/aws-action-layer-integration.test.js"
+                                  ],
+                        "order":  10
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/integration/aws-credentials-validation.test.js",
+                                      "server/test/integration/cloudformation-stack-creation.test.js",
+                                      "server/test/integration/email-notifications-integration.test.js",
+                                      "server/test/integration/huggingface-integration.test.js",
+                                      "server/test/integration/pipeline-simulation.test.js",
+                                      "server/test/integration/provider-verification-integration.test.js",
+                                      "server/test/integration/questionnaire-audit-integration.test.js",
+                                      "server/test/integration/task-planning-integration.test.js",
+                                      "server/test/manual/verify-cloudformation-stack.js"
+                                  ],
+                        "order":  11
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/models/build.test.js",
+                                      "server/test/models/db.test.js",
+                                      "server/test/models/organization.test.js",
+                                      "server/test/models/project-sharing.test.js",
+                                      "server/test/models/project.test.js",
+                                      "server/test/models/user.test.js",
+                                      "server/test/plugins/auth-load.test.js",
+                                      "server/test/plugins/auth-simple.test.js",
+                                      "server/test/plugins/auth.test.js"
+                                  ],
+                        "order":  12
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/plugins/support.test.js",
+                                      "server/test/routes/aws-actions.test.js",
+                                      "server/test/routes/aws-credentials.test.js",
+                                      "server/test/routes/aws-setup.test.js",
+                                      "server/test/routes/e2e-validation.test.js",
+                                      "server/test/routes/example.test.js",
+                                      "server/test/routes/github-oauth.test.js",
+                                      "server/test/routes/model-router.test.js",
+                                      "server/test/routes/projects-deploy.test.js"
+                                  ],
+                        "order":  13
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/routes/root.test.js",
+                                      "server/test/services/admin-console-comprehensive.test.js",
+                                      "server/test/services/admin-console.test.js",
+                                      "server/test/services/ai-guidance-engine.test.js",
+                                      "server/test/services/artifact-persistence.test.js",
+                                      "server/test/services/audit-logger.test.js",
+                                      "server/test/services/auth-project-sharing.test.js",
+                                      "server/test/services/auth.test.js",
+                                      "server/test/services/aws-action-layer.test.js"
+                                  ],
+                        "order":  14
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/services/aws-deployment-stage.test.js",
+                                      "server/test/services/clarifier-batch-qa.test.js",
+                                      "server/test/services/cloudformation-service.test.js",
+                                      "server/test/services/code-generation-integration.test.js",
+                                      "server/test/services/cost-controls.test.js",
+                                      "server/test/services/deepseek-electronhub.test.js",
+                                      "server/test/services/e2e-demo-validator.test.js",
+                                      "server/test/services/email-notifications.test.js",
+                                      "server/test/services/error-handling-integration.test.js"
+                                  ],
+                        "order":  15
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/services/file-structure-creation.test.js",
+                                      "server/test/services/gcp-deployment.test.js",
+                                      "server/test/services/github-models-provider.test.js",
+                                      "server/test/services/huggingface-inference.test.js",
+                                      "server/test/services/huggingface-provider.test.js",
+                                      "server/test/services/job-orchestrator.test.js",
+                                      "server/test/services/job-processor.test.js",
+                                      "server/test/services/job-queue.test.js",
+                                      "server/test/services/log-retention.test.js"
+                                  ],
+                        "order":  16
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/services/metrics-collector.test.js",
+                                      "server/test/services/model-router-initialization.test.js",
+                                      "server/test/services/model-router.test.js",
+                                      "server/test/services/monitoring.test.js",
+                                      "server/test/services/pipeline-e2e.test.js",
+                                      "server/test/services/pipeline-failure-recovery.test.js",
+                                      "server/test/services/pipeline-orchestrator-retry-simple.test.js",
+                                      "server/test/services/pipeline-orchestrator-retry.test.js",
+                                      "server/test/services/pipeline-orchestrator.test.js"
+                                  ],
+                        "order":  17
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/services/pipeline-stage-integration.test.js",
+                                      "server/test/services/prompt-templates.test.js",
+                                      "server/test/services/provider-verification.test.js",
+                                      "server/test/services/questionnaire-validator.test.js",
+                                      "server/test/services/redis-integration.test.js",
+                                      "server/test/services/repo-creation-stage.test.js",
+                                      "server/test/services/security-audit-logger.test.js",
+                                      "server/test/services/stage-error-recovery.test.js",
+                                      "server/test/services/structured-logger.test.js"
+                                  ],
+                        "order":  18
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "server/test/services/task-planner.test.js",
+                                      "server/test/services/telemetry.test.js",
+                                      "server/test/services/zukijourney-provider.test.js",
+                                      "workers/test/artifact-storage-enhanced.test.js",
+                                      "workers/test/file-structure-worker.test.js",
+                                      "workers/test/helper.js",
+                                      "workers/test/log-streaming.test.js",
+                                      "workers/test/sample.test.js",
+                                      "workers/test/self-fix-loop.test.js"
+                                  ],
+                        "order":  19
+                    },
+                    {
+                        "message":  "Add unit and integration tests",
+                        "day":  3,
+                        "files":  [
+                                      "workers/test/worker-pool.test.js"
+                                  ],
+                        "order":  20
+                    }
+                ]
+}

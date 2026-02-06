@@ -1,0 +1,205 @@
+﻿node.exe : npm warn Unknown project config "inject-workspace-packages". This will stop working in the next major 
+version of npm.
+At line:1 char:1
++ & "C:\Program Files/node.exe" "C:\Users\rehob\AppData\Roaming\npm/nod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...version of npm.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please 
+update: `npm i baseline-browser-mapping@latest -D`
+  console.log
+    [dotenv@17.2.3] injecting env (70) from .env -- tip: ΓÜÖ∩╕Å  load multiple .env files with { path: ['.env.local', '.env'] }
+
+      at _log (../node_modules/.pnpm/dotenv@17.2.3/node_modules/dotenv/lib/main.js:142:11)
+
+  console.log
+    Γ£à StageRouter initialized with stage-based routing
+
+      at new log (services/stage-router.js:145:13)
+
+  console.log
+    ≡ƒÜÇ Starting Pipeline Simulation...
+
+      at Object.log (test/integration/pipeline-simulation.test.js:91:17)
+
+  console.log
+    Starting pipeline for build sim-build-1
+
+      at PipelineOrchestrator.log [as startPipeline] (services/pipeline-orchestrator.js:180:13)
+
+  console.log
+    Created project directory structure at C:\Hackathons\Apex Coder\server\work\sim-project-1
+
+      at PipelineOrchestrator.log [as createProjectDirectoryStructure] (services/pipeline-orchestrator.js:310:13)
+
+  console.log
+    [Build sim-build-1] Build started email sent to user test-user
+
+      at PipelineOrchestrator.log [as startPipeline] (services/pipeline-orchestrator.js:225:19)
+
+  console.log
+    [WS] Build Status: running
+
+      at Object.log (test/integration/pipeline-simulation.test.js:20:59)
+
+  console.log
+    Executing stage 0: questionnaire for build sim-build-1
+
+      at PipelineOrchestrator.log [as executeStage] (services/pipeline-orchestrator.js:325:13)
+
+  console.log
+    [WS] Phase Update: questionnaire - started
+
+      at Object.log (test/integration/pipeline-simulation.test.js:19:72)
+
+  console.log
+    [Build sim-build-1] Executing stage 0 (questionnaire) - attempt 1/1
+
+      at PipelineOrchestrator.log [as executeStageWithRetry] (services/pipeline-orchestrator.js:500:17)
+
+  console.log
+    [Build sim-build-1] Persisting 1 artifacts for stage 0 (questionnaire)...
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:576:15)
+
+  console.log
+    [Build sim-build-1]   Γ£à Persisted: specs.json
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:585:19)
+
+  console.log
+    [Build sim-build-1] Γ£à Successfully persisted 1/1 artifacts for stage 0 (questionnaire)
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:603:15)
+
+  console.log
+    [WS] Phase Update: questionnaire - completed
+
+      at Object.log (test/integration/pipeline-simulation.test.js:19:72)
+
+  console.error
+    [Build sim-build-1] Stage 0 (questionnaire) failed permanently: TypeError: this.websocket.sendBuildProgress is not a function
+        at PipelineOrchestrator.sendBuildProgress [as executeStage] (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:389:24)
+        at PipelineOrchestrator.startPipeline (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:241:7)
+        at Object.<anonymous> (C:\Hackathons\Apex Coder\server\test\integration\pipeline-simulation.test.js:94:28)
+
+    [0m [90m 404 |[39m       [36mreturn[39m result[33m;[39m
+     [90m 405 |[39m     } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 406 |[39m       console[33m.[39merror([32m`[Build ${context.buildId}] Stage ${stageNumber} (${stage.name}) failed permanently:`[39m[33m,[39m error)[33m;[39m
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 407 |[39m
+     [90m 408 |[39m       context[33m.[39mfailedStage [33m=[39m stageNumber[33m;[39m
+     [90m 409 |[39m       context[33m.[39mstatus [33m=[39m [32m'failed'[39m[33m;[39m[0m
+
+      at PipelineOrchestrator.error [as executeStage] (services/pipeline-orchestrator.js:406:15)
+      at PipelineOrchestrator.startPipeline (services/pipeline-orchestrator.js:241:7)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:94:28)
+
+  console.log
+    [Build sim-build-1] Persisting intermediate artifacts before halting pipeline...
+
+      at PipelineOrchestrator.log [as executeStage] (services/pipeline-orchestrator.js:414:15)
+
+  console.log
+    [Build sim-build-1] Persisting 1 artifacts for stage 0 (questionnaire)...
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:576:15)
+
+  console.log
+    [Build sim-build-1]   Γ£à Persisted: specs.json
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:585:19)
+
+  console.log
+    [Build sim-build-1] Γ£à Successfully persisted 1/1 artifacts for stage 0 (questionnaire)
+
+      at PipelineOrchestrator.log [as persistStageArtifacts] (services/pipeline-orchestrator.js:603:15)
+
+  console.log
+    [WS] Error: this.websocket.sendBuildProgress is not a function
+
+      at Object.log (test/integration/pipeline-simulation.test.js:21:52)
+
+  console.log
+    [WS] Phase Update: questionnaire - failed
+
+      at Object.log (test/integration/pipeline-simulation.test.js:19:72)
+
+  console.log
+    [Build sim-build-1] ≡ƒ¢æ Pipeline halted at stage 0 (questionnaire)
+
+      at PipelineOrchestrator.log [as executeStage] (services/pipeline-orchestrator.js:456:15)
+
+  console.error
+    Pipeline failed for build sim-build-1: TypeError: this.websocket.sendBuildProgress is not a function
+        at PipelineOrchestrator.sendBuildProgress [as executeStage] (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:389:24)
+        at PipelineOrchestrator.startPipeline (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:241:7)
+        at Object.<anonymous> (C:\Hackathons\Apex Coder\server\test\integration\pipeline-simulation.test.js:94:28)
+
+    [0m [90m 248 |[39m       }[33m;[39m
+     [90m 249 |[39m     } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 250 |[39m       console[33m.[39merror([32m`Pipeline failed for build ${buildId}:`[39m[33m,[39m error)[33m;[39m
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 251 |[39m
+     [90m 252 |[39m       context[33m.[39mstatus [33m=[39m [32m'failed'[39m[33m;[39m
+     [90m 253 |[39m       context[33m.[39merror [33m=[39m error[33m.[39mmessage[33m;[39m[0m
+
+      at PipelineOrchestrator.error [as startPipeline] (services/pipeline-orchestrator.js:250:15)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:94:28)
+
+  console.log
+    [Build sim-build-1] Build failed email sent to user test-user
+
+      at PipelineOrchestrator.log [as startPipeline] (services/pipeline-orchestrator.js:279:19)
+
+  console.log
+    [WS] Error: this.websocket.sendBuildProgress is not a function
+
+      at Object.log (test/integration/pipeline-simulation.test.js:21:52)
+
+  console.error
+    Γ¥î Pipeline Failed: TypeError: this.websocket.sendBuildProgress is not a function
+        at PipelineOrchestrator.sendBuildProgress [as executeStage] (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:389:24)
+        at PipelineOrchestrator.startPipeline (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:241:7)
+        at Object.<anonymous> (C:\Hackathons\Apex Coder\server\test\integration\pipeline-simulation.test.js:94:28)
+
+    [0m [90m 105 |[39m             [90m// Add more assertions based on expected artifacts[39m
+     [90m 106 |[39m         } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 107 |[39m             console[33m.[39merror([32m"Γ¥î Pipeline Failed:"[39m[33m,[39m error)[33m;[39m
+     [90m     |[39m                     [31m[1m^[22m[39m
+     [90m 108 |[39m             [36mthrow[39m error[33m;[39m
+     [90m 109 |[39m         }
+     [90m 110 |[39m     })[33m;[39m[0m
+
+      at Object.error (test/integration/pipeline-simulation.test.js:107:21)
+
+FAIL test/integration/pipeline-simulation.test.js
+  Full Pipeline Simulation
+    ├ù should run the full pipeline for a To-Do List app (273 ms)
+
+  ΓùÅ Full Pipeline Simulation ΓÇ║ should run the full pipeline for a To-Do List app
+
+    TypeError: this.websocket.sendBuildProgress is not a function
+
+    [0m [90m 387 |[39m         [90m// Send progress update[39m
+     [90m 388 |[39m         [36mconst[39m progress [33m=[39m 
+((context[33m.[39mcompletedStages[33m.[39mlength) [33m/[39m 
+[33mObject[39m[33m.[39mkeys([36mthis[39m[33m.[39m[33mPIPELINE_STAGES[39m)[33m.[39mlength) [33m*[39m 
+[35m100[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 389 |[39m         
+[36mthis[39m[33m.[39mwebsocket[33m.[39msendBuildProgress(context[33m.[39mbuildId[33m,[39m {
+     [90m     |[39m                        [31m[1m^[22m[39m
+     [90m 390 |[39m           percentage[33m:[39m [33mMath[39m[33m.[39mround(progress)[33m,[39m
+     [90m 391 |[39m           currentStage[33m:[39m stage[33m.[39mname[33m,[39m
+     [90m 392 |[39m           status[33m:[39m [32m'completed'[39m[0m
+
+      at PipelineOrchestrator.sendBuildProgress [as executeStage] (services/pipeline-orchestrator.js:389:24)
+      at PipelineOrchestrator.startPipeline (services/pipeline-orchestrator.js:241:7)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:94:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        2.706 s, estimated 3 s
+Ran all test suites matching /test\\integration\\pipeline-simulation.test.js/i.

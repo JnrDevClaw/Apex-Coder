@@ -1,0 +1,107 @@
+name: Human-Like Batch Committer
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Run every 15 mins to hit 20 commits/day with sleep gaps
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout Staging Branch
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          path: staging-repo
+          fetch-depth: 0
+
+      - name: Checkout Main Branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-repo
+
+      - name: Check Time & Schedule
+        id: check_schedule
+        shell: bash
+        run: |
+          # 1. Check for Sleep Time (Simulate 11PM - 9AM sleep)
+          # Assuming UTC for simplicity, or adjust for user's timezone offset
+          HOUR=$(date +%H)
+          if [ "$HOUR" -ge 23 ] || [ "$HOUR" -lt 9 ]; then
+            echo "💤 Sleeping time. Skipping commit."
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "should_run=true" >> $GITHUB_OUTPUT
+
+      - name: Process Next Batch
+        if: steps.check_schedule.outputs.should_run == 'true'
+        shell: bash
+        run: |
+          cd staging-repo
+          
+          if [ ! -f .github/commit-schedule.json ]; then
+            echo "No schedule file found in staging."
+            exit 0
+          fi
+
+          # Read first batch
+          BATCH=$(jq '.batches[0]' .github/commit-schedule.json)
+          
+          if [ "$BATCH" == "null" ]; then
+            echo "✅ All batches completed!"
+            exit 0
+          fi
+
+          # Random Delay (simulating human variance 5-60 mins)
+          # Since cron runs every 30, we just sleep 0-15 mins to offset
+          SLEEP_TIME=$(( ( RANDOM % 900 )  + 1 ))
+          echo "⏳ Waiting ${SLEEP_TIME}s to mimic human timing..."
+          sleep $SLEEP_TIME
+
+          FILES=$(echo $BATCH | jq -r '.files[]')
+          MESSAGE=$(echo $BATCH | jq -r '.message')
+          
+          echo "🚀 Processing batch: $MESSAGE"
+
+          # Move files to main repo
+          for FILE in $FILES; do
+             mkdir -p "../main-repo/$(dirname "$FILE")"
+             cp "_staging/$FILE" "../main-repo/$FILE"
+          done
+
+          # Update Schedule in Staging (Remove processed batch)
+          jq 'del(.batches[0])' .github/commit-schedule.json > temp.json && mv temp.json .github/commit-schedule.json
+          
+          # Commit update to staging
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/commit-schedule.json
+          git commit -m "Update schedule: processed batch"
+          git push
+
+          # Commit changes to MAIN
+          cd ../main-repo
+          git config user.name "Apex Coder" # Simulation Name
+          git config user.email "user@apexcoder.com"
+          
+          git add .
+          git commit -m "$MESSAGE"
+          git push
+
+      - name: Clean up Staging Files (Optional)
+        if: steps.check_schedule.outputs.should_run == 'true'
+        shell: bash
+        run: |
+           # Delete from staging files that were moved? 
+           # Actually we keep them locally in staging dir but we removed them from json so they won't be picked again.
+           # Real cleanup not strictly necessary if we rely on JSON.
+           echo "Batch processed."

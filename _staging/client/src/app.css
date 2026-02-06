@@ -1,0 +1,503 @@
+@import 'tailwindcss';
+
+/* CSS Variables for Cyber Theme */
+@theme {
+  --color-bg-primary: #0A0A0C;
+  --color-bg-secondary: #101218;
+  --color-bg-panel: #0F1217;
+  --color-accent-primary: #3AB8FF;
+  --color-accent-secondary: #A46BFF;
+  --color-success: #7BFFB2;
+  --color-error: #FF4C88;
+  --color-text-primary: #E5E7EB;
+  --color-text-secondary: #9CA3AF;
+}
+
+:root {
+  --bg-primary: #0A0A0C;
+  --bg-secondary: #101218;
+  --panel: #0F1217;
+  --accent-primary: #3AB8FF;
+  --accent-secondary: #A46BFF;
+  --success: #7BFFB2;
+  --error: #FF4C88;
+  --border-glow: rgba(58, 184, 255, 0.35);
+  --text-primary: #E5E7EB;
+  --text-secondary: #9CA3AF;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Smooth micro-interactions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+  opacity: 1;
+  box-shadow: 0 0 6px var(--accent-primary);
+}
+
+/* Build log terminal styling */
+.build-log {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glow);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  color: var(--accent-primary);
+}
+
+.build-log::-webkit-scrollbar {
+  width: 6px;
+}
+
+.build-log::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.build-log::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+
+/* Status Chip Variants */
+.status-creating {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.status-created {
+  color: var(--success);
+  border-color: var(--success);
+  box-shadow: 0 0 6px var(--success);
+}
+
+.status-error {
+  color: var(--error);
+  border-color: var(--error);
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.status-cancelled {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* Neon Glow Filter */
+.filter-neon {
+  filter: drop-shadow(0 0 6px var(--accent-primary));
+}
+
+.filter-neon:hover {
+  filter: drop-shadow(0 0 12px var(--accent-primary));
+}
+
+/* AI Thought Pulse Bar */
+.ai-pulse-bar {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  animation: shimmer 2s linear infinite;
+}
+
+/* Shimmer Animation for Creating States */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(58, 184, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 6px var(--accent-primary);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 12px var(--accent-primary);
+  }
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Neon Border on Hover */
+.neon-border {
+  border: 1px solid transparent;
+  transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.neon-border:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 12px var(--border-glow);
+}
+
+/* Panel Styling */
+.cyber-panel {
+  background: var(--panel);
+  border: 1px solid var(--border-glow);
+  border-radius: 8px;
+}
+
+/* Button Variants */
+.btn-primary {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(58, 184, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-secondary:hover {
+  background: rgba(58, 184, 255, 0.1);
+  box-shadow: 0 0 12px var(--border-glow);
+}
+
+.btn-destructive {
+  background: transparent;
+  color: var(--error);
+  border: 1px solid var(--error);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-destructive:hover {
+  background: rgba(255, 76, 136, 0.1);
+  box-shadow: 0 0 12px rgba(255, 76, 136, 0.35);
+}
+
+/* Focus Styles */
+.focus\:ring-neon:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+
+/* Loading Spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Dot Animation for Creating States */
+@keyframes dot-pulse {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+.dot-pulse span {
+  animation: dot-pulse 1.4s infinite;
+}
+
+.dot-pulse span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot-pulse span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+/*
+ Dropdown/Select Contrast Fix for Dark Theme */
+select {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+select option:first-child {
+  color: var(--text-secondary);
+}
+
+select option:checked,
+select option:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* Ensure dropdown options are visible in all browsers */
+select:focus option:checked {
+  background: linear-gradient(var(--accent-primary), var(--accent-primary));
+  color: var(--bg-primary);
+}
+
+/* ===== RESPONSIVE & MOBILE OPTIMIZATIONS ===== */
+
+/* Touch-friendly tap targets (minimum 44x44px) */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input[type="checkbox"],
+  input[type="radio"],
+  select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove tap highlight */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  
+  /* Prevent text selection on interactive elements */
+  button,
+  .touch-manipulation {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+/* Mobile-optimized scrolling */
+@media (max-width: 768px) {
+  body {
+    /* Smooth momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    
+    /* Prevent overscroll bounce */
+    overscroll-behavior-y: none;
+    
+    /* Optimize font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Reduce motion for better mobile performance */
+  * {
+    transition-duration: 100ms;
+  }
+  
+  /* Smaller text on mobile for better readability */
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Reduce vertical padding in landscape */
+  .cyber-panel {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Safe area insets for devices with notches */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cyber-panel {
+    border-width: 2px;
+  }
+  
+  button {
+    border-width: 2px;
+  }
+}
+
+/* Dark mode optimizations (already dark, but for completeness) */
+@media (prefers-color-scheme: dark) {
+  /* Already optimized for dark mode */
+}
+
+/* Touch manipulation utility */
+.touch-manipulation {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Active state for touch devices */
+@media (hover: none) {
+  .touch-manipulation:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Swipe indicators */
+.swipe-indicator {
+  position: relative;
+}
+
+.swipe-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+/* Mobile-optimized inputs */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Sticky positioning support */
+@supports (position: sticky) {
+  .sticky-mobile {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+/* Grid auto-fit for responsive cards */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile-friendly modals */
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+/* Pull-to-refresh indicator */
+.pull-to-refresh {
+  overscroll-behavior-y: contain;
+}
+
+/* Haptic feedback simulation (visual) */
+@keyframes haptic-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.haptic-feedback:active {
+  animation: haptic-pulse 0.1s ease-in-out;
+}

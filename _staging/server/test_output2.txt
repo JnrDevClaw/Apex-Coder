@@ -1,0 +1,119 @@
+﻿node.exe : npm warn Unknown project config "inject-workspace-packages". This will stop working in the next major 
+version of npm.
+At line:1 char:1
++ & "C:\Program Files/node.exe" "C:\Users\rehob\AppData\Roaming\npm/nod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...version of npm.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please 
+update: `npm i baseline-browser-mapping@latest -D`
+  console.log
+    [dotenv@17.2.3] injecting env (70) from .env -- tip: ≡ƒæÑ sync secrets across teammates & machines: https://dotenvx.com/ops
+
+      at _log (../node_modules/.pnpm/dotenv@17.2.3/node_modules/dotenv/lib/main.js:142:11)
+
+  console.log
+    Γ£à StageRouter initialized with stage-based routing
+
+      at new log (services/stage-router.js:145:13)
+
+  console.log
+    ≡ƒÜÇ Starting Pipeline Simulation...
+
+      at Object.log (test/integration/pipeline-simulation.test.js:78:17)
+
+  console.log
+    Starting pipeline for build sim-build-1
+
+      at PipelineOrchestrator.log [as startPipeline] (services/pipeline-orchestrator.js:180:13)
+
+  console.log
+    Created project directory structure at C:\Hackathons\Apex Coder\server\work\sim-project-1
+
+      at PipelineOrchestrator.log [as createProjectDirectoryStructure] (services/pipeline-orchestrator.js:310:13)
+
+  console.warn
+    [Build sim-build-1] Failed to send build started email: this.emailService.sendBuildStartedNotification is not a function
+
+    [0m [90m 226 |[39m         }
+     [90m 227 |[39m       } [36mcatch[39m (emailError) {
+    [31m[1m>[22m[39m[90m 228 |[39m         console[33m.[39mwarn([32m`[Build ${buildId}] Failed to send build started email:`[39m[33m,[39m emailError[33m.[39mmessage)[33m;[39m
+     [90m     |[39m                 [31m[1m^[22m[39m
+     [90m 229 |[39m         [90m// Don't fail the build if email fails[39m
+     [90m 230 |[39m       }
+     [90m 231 |[39m[0m
+
+      at PipelineOrchestrator.warn [as startPipeline] (services/pipeline-orchestrator.js:228:17)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:81:28)
+
+  console.error
+    Pipeline failed for build sim-build-1: TypeError: this.websocket.sendBuildStatus is not a function
+        at PipelineOrchestrator.sendBuildStatus [as startPipeline] (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:234:24)
+        at Object.<anonymous> (C:\Hackathons\Apex Coder\server\test\integration\pipeline-simulation.test.js:81:28)
+
+    [0m [90m 248 |[39m       }[33m;[39m
+     [90m 249 |[39m     } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 250 |[39m       console[33m.[39merror([32m`Pipeline failed for build ${buildId}:`[39m[33m,[39m error)[33m;[39m
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 251 |[39m
+     [90m 252 |[39m       context[33m.[39mstatus [33m=[39m [32m'failed'[39m[33m;[39m
+     [90m 253 |[39m       context[33m.[39merror [33m=[39m error[33m.[39mmessage[33m;[39m[0m
+
+      at PipelineOrchestrator.error [as startPipeline] (services/pipeline-orchestrator.js:250:15)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:81:28)
+
+  console.warn
+    [Build sim-build-1] Failed to send build failed email: this.emailService.sendBuildFailedNotification is not a function
+
+    [0m [90m 280 |[39m         }
+     [90m 281 |[39m       } [36mcatch[39m (emailError) {
+    [31m[1m>[22m[39m[90m 282 |[39m         console[33m.[39mwarn([32m`[Build ${buildId}] Failed to send build failed email:`[39m[33m,[39m emailError[33m.[39mmessage)[33m;[39m
+     [90m     |[39m                 [31m[1m^[22m[39m
+     [90m 283 |[39m         [90m// Don't fail further if email fails[39m
+     [90m 284 |[39m       }
+     [90m 285 |[39m[0m
+
+      at PipelineOrchestrator.warn [as startPipeline] (services/pipeline-orchestrator.js:282:17)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:81:28)
+
+  console.error
+    Γ¥î Pipeline Failed: TypeError: this.websocket.sendError is not a function
+        at PipelineOrchestrator.sendError [as startPipeline] (C:\Hackathons\Apex Coder\server\services\pipeline-orchestrator.js:288:24)
+        at Object.<anonymous> (C:\Hackathons\Apex Coder\server\test\integration\pipeline-simulation.test.js:81:28)
+
+    [0m [90m 92 |[39m             [90m// Add more assertions based on expected artifacts[39m
+     [90m 93 |[39m         } [36mcatch[39m (error) {
+    [31m[1m>[22m[39m[90m 94 |[39m             console[33m.[39merror([32m"Γ¥î Pipeline Failed:"[39m[33m,[39m error)[33m;[39m
+     [90m    |[39m                     [31m[1m^[22m[39m
+     [90m 95 |[39m             [36mthrow[39m error[33m;[39m
+     [90m 96 |[39m         }
+     [90m 97 |[39m     })[33m;[39m[0m
+
+      at Object.error (test/integration/pipeline-simulation.test.js:94:21)
+
+FAIL test/integration/pipeline-simulation.test.js (9.602 s)
+  Full Pipeline Simulation
+    ├ù should run the full pipeline for a To-Do List app (582 ms)
+
+  ΓùÅ Full Pipeline Simulation ΓÇ║ should run the full pipeline for a To-Do List app
+
+    TypeError: this.websocket.sendError is not a function
+
+    [0m [90m 286 |[39m       [90m// Send WebSocket error[39m
+     [90m 287 |[39m       [36mif[39m ([36mthis[39m[33m.[39mwebsocket) {
+    [31m[1m>[22m[39m[90m 288 |[39m         
+[36mthis[39m[33m.[39mwebsocket[33m.[39msendError(buildId[33m,[39m {
+     [90m     |[39m                        [31m[1m^[22m[39m
+     [90m 289 |[39m           message[33m:[39m error[33m.[39mmessage[33m,[39m
+     [90m 290 |[39m           stage[33m:[39m context[33m.[39mcurrentStage
+     [90m 291 |[39m         })[33m;[39m[0m
+
+      at PipelineOrchestrator.sendError [as startPipeline] (services/pipeline-orchestrator.js:288:24)
+      at Object.<anonymous> (test/integration/pipeline-simulation.test.js:81:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        11.363 s
+Ran all test suites matching /test\\integration\\pipeline-simulation.test.js/i.

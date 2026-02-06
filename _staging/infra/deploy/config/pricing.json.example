@@ -1,0 +1,46 @@
+{
+  "huggingface.OpenHermes-2.5-Mistral-7B": {
+    "input": 0.0001,
+    "output": 0.0002
+  },
+  "huggingface.Qwen/Qwen2-7B-Instruct": {
+    "input": 0.0001,
+    "output": 0.0002
+  },
+  "zukijourney.gpt-5-mini": {
+    "input": 0.15,
+    "output": 0.60
+  },
+  "zukijourney.gpt-4o": {
+    "input": 2.50,
+    "output": 10.00
+  },
+  "zukijourney.claude-3-5-haiku-20241022": {
+    "input": 0.80,
+    "output": 4.00
+  },
+  "github-models.meta/Llama-4-Scout-17B-16E-Instruct": {
+    "input": 0.0,
+    "output": 0.0
+  },
+  "deepseek.deepseek-v3": {
+    "input": 0.27,
+    "output": 1.10
+  },
+  "gemini.gemini-3-pro": {
+    "input": 0.075,
+    "output": 0.30
+  },
+  "openrouter.default": {
+    "input": 3.00,
+    "output": 15.00
+  },
+  "scaleway.default": {
+    "input": 0.10,
+    "output": 0.20
+  },
+  "mistral.default": {
+    "input": 2.00,
+    "output": 6.00
+  }
+}

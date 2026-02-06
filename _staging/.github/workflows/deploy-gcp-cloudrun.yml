@@ -1,0 +1,65 @@
+name: Deploy Backend to Google Cloud Run
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'server/**'
+      - 'infra/Dockerfile.backend.prod'
+      - 'pnpm-lock.yaml'
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  REGION: us-central1 # Default region, can be overridden
+  GAR_LOCATION: us-central1 # Artifact Registry location
+  REPOSITORY: backend-repo # Artifact Registry repository name
+  SERVICE: backend-service # Cloud Run service name
+
+jobs:
+  deploy:
+    name: Build & Deploy to Cloud Run
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write' # Required for Workload Identity Federation
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # method 1: Authenticate via Service Account Key JSON
+      # (Simpler for initial setup)
+      - name: Google Auth
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          # Alternatively for Workload Identity Federation:
+          # workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          # service_account: ${{ secrets.GCP_SA_EMAIL }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker ${{ env.GAR_LOCATION }}-docker.pkg.dev
+
+      - name: Build and Push Container
+        run: |
+          docker build -f infra/Dockerfile.backend.prod -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}" .
+          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}"
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}
+          # PORT environment variable is automatically injected by Cloud Run
+          env_vars: |
+            NODE_ENV=production
+          
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}

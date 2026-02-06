@@ -1,0 +1,17 @@
+packages:
+  - Frontend
+  - client
+  - server
+  - workers
+
+# Required for pnpm v10 deploy command
+inject-workspace-packages: true
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - aws-sdk
+  - cpu-features
+  - esbuild
+  - msgpackr-extract
+  - protobufjs
+  - ssh2

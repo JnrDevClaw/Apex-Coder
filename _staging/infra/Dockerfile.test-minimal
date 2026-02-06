@@ -1,0 +1,30 @@
+# Minimal test Docker file to verify module resolution
+FROM node:18-alpine
+
+WORKDIR /workspace
+
+# Install pnpm
+RUN npm install -g pnpm@10.24.0
+
+# Copy minimal workspace files
+COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
+COPY server/package.json ./server/
+
+# Configure pnpm to avoid symlinks and use hoisted node_modules
+RUN pnpm config set node-linker hoisted && \
+    pnpm config set shamefully-hoist true && \
+    pnpm config set symlink false
+
+# Install only essential dependencies for testing
+RUN pnpm add fastify@5.6.1 --workspace-root
+
+# Test module resolution
+RUN node -e "console.log('Testing fastify...'); require('fastify'); console.log('✅ Fastify works!');"
+
+# Set working directory
+WORKDIR /workspace/server
+
+# Test from server directory
+RUN node -e "console.log('Testing from server dir...'); require('fastify'); console.log('✅ Fastify works from server!');"
+
+CMD ["echo", "Module resolution test completed successfully!"]
