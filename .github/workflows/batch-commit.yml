@@ -2,7 +2,7 @@ name: Human-Like Batch Committer
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Run every 15 mins to hit 20 commits/day with sleep gaps
+    - cron: '*/10 * * * *' # Run every 10 mins to finish ~60 batches in one day (14h active window)
   workflow_dispatch:
 
 permissions:
@@ -67,18 +67,15 @@ jobs:
           echo "⏳ Waiting ${SLEEP_TIME}s to mimic human timing..."
           sleep $SLEEP_TIME
 
-          FILES=$(echo $BATCH | jq -r '.files[]')
-          MESSAGE=$(echo $BATCH | jq -r '.message')
-          
-          echo "🚀 Processing batch: $MESSAGE"
+          echo "$BATCH" | jq -r '.files[]' | while IFS= read -r FILE; do
+             # Ensure parent directory exists (handle potential errors gracefully)
+             DIRNAME=$(dirname "$FILE")
+             mkdir -p "../main-repo/$DIRNAME" || echo "Failed to create dir: $DIRNAME"
 
-          # Move files to main repo (skip missing files to avoid failing the job)
-          for FILE in $FILES; do
-             mkdir -p "../main-repo/$(dirname \"$FILE\")"
              if [ -f "_staging/$FILE" ]; then
-               cp "_staging/$FILE" "../main-repo/$FILE"
+               cp "_staging/$FILE" "../main-repo/$FILE" || echo "❌ Failed to copy $FILE"
              else
-               echo "Warning: missing _staging/$FILE, skipping."
+               echo "⚠️ Warning: missing _staging/$FILE, skipping."
              fi
           done
 

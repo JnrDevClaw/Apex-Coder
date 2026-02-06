@@ -1,0 +1,99 @@
+name: Block private files
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  block-private-files:
+    name: Block private files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan changed files for banned patterns
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BANNED_PATTERNS=(
+            '^\.env$'
+            '^\.env\.'
+            '(^|/)\.env$'
+            '\.pem$'
+            '\.key$'
+            '(^|/)id_rsa$'
+            '(^|/)id_ecdsa$'
+            '\.p12$'
+            '\.pfx$'
+            '\.secret$'
+            '^\.aws/credentials$'
+            '^\.azure(/|$)'
+            '\.bak$'
+            '\.pem\.enc$'
+          )
+
+          echo "Event: ${GITHUB_EVENT_NAME}"
+
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+            git fetch --no-tags --prune --depth=1 origin "$BASE_SHA" || true
+            git fetch --no-tags --prune --depth=1 origin "$HEAD_SHA" || true
+            CHANGED_FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)
+          else
+            CURRENT_SHA="${{ github.sha }}"
+            if git rev-parse --verify "${CURRENT_SHA}^" >/dev/null 2>&1; then
+              CHANGED_FILES=$(git diff --name-only "${CURRENT_SHA}^" "${CURRENT_SHA}" || true)
+            else
+              CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD || git ls-files)
+            fi
+          fi
+
+          CHANGED_FILES=$(printf '%s\n' "$CHANGED_FILES" | sed '/^\s*$/d' || true)
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No changed files detected."
+            exit 0
+          fi
+
+          echo "Changed files:"
+          printf '%s\n' "$CHANGED_FILES"
+
+          VIOLATIONS=()
+          while IFS= read -r file; do
+            for pat in "${BANNED_PATTERNS[@]}"; do
+              if [[ "$file" =~ $pat ]]; then
+                VIOLATIONS+=("$file")
+                break
+              fi
+            done
+          done <<< "$CHANGED_FILES"
+
+          if [ ${#VIOLATIONS[@]} -ne 0 ]; then
+            echo "::error title=Blocked files found::Found ${#VIOLATIONS[@]} banned file(s)"
+            for v in "${VIOLATIONS[@]}"; do
+              echo " - $v"
+            done
+
+            TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            {
+              echo "Blocked files report - $TIMESTAMP"
+              for v in "${VIOLATIONS[@]}"; do echo "$v"; done
+            } > blocked-files-report.txt
+
+            echo "Detailed report written to blocked-files-report.txt"
+            exit 1
+          else
+            echo "No banned files detected."
+            exit 0
+          fi
