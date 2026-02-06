@@ -4,29 +4,6 @@
       "message": "Update project structure",
       "day": 1,
       "files": [
-        "client/src/lib/components/ResponsiveLayout.svelte",
-        "client/src/lib/components/RetryButton.svelte",
-        "client/src/lib/components/SkipToContent.svelte",
-        "client/src/lib/components/SpecSummary.svelte",
-        "client/src/lib/components/StageConfigurationManager.svelte",
-        "client/src/lib/components/StageProgress.svelte",
-        "client/src/lib/components/StageRenderer.svelte",
-        "client/src/lib/components/StatusBadge.svelte",
-        "client/src/lib/components/SwipeableCard.svelte",
-        "client/src/lib/components/TerminalLog.svelte",
-        "client/src/lib/components/UserModeSelector.svelte",
-        "client/src/lib/components/VirtualPipelineList.svelte",
-        "client/src/lib/components/questionnaire/AIAssistedInput.svelte",
-        "client/src/lib/components/questionnaire/ConversationalStage.svelte",
-        "client/src/lib/components/questionnaire/FormField.svelte",
-        "client/src/lib/components/questionnaire/FrameworkSelector.svelte"
-      ],
-      "order": 7
-    },
-    {
-      "message": "Update project structure",
-      "day": 1,
-      "files": [
         "client/src/lib/components/questionnaire/IntelligentClarifierStage.svelte",
         "client/src/lib/components/questionnaire/ProjectContextStage.svelte",
         "client/src/lib/components/questionnaire/ProjectFlowBuilder.svelte",
