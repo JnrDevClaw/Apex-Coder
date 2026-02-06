@@ -4,29 +4,6 @@
       "message": "Update project structure",
       "day": 1,
       "files": [
-        "client/src/lib/components/BuildProgress.svelte",
-        "client/src/lib/components/CancelButton.svelte",
-        "client/src/lib/components/CyberPanel.svelte",
-        "client/src/lib/components/DeploymentStatus.svelte",
-        "client/src/lib/components/DynamicStageRenderer.svelte",
-        "client/src/lib/components/ErrorReporter.svelte",
-        "client/src/lib/components/GCPConnectionModal.css",
-        "client/src/lib/components/GCPConnectionModal.jsx",
-        "client/src/lib/components/GCPConnectionModal.svelte",
-        "client/src/lib/components/HelpTooltip.svelte",
-        "client/src/lib/components/KeyboardShortcutsHelp.svelte",
-        "client/src/lib/components/LanguageSelector.svelte",
-        "client/src/lib/components/LazyLogViewer.svelte",
-        "client/src/lib/components/LazyPipelineDetails.svelte",
-        "client/src/lib/components/MobileBottomNav.svelte",
-        "client/src/lib/components/MobileNav.svelte"
-      ],
-      "order": 5
-    },
-    {
-      "message": "Update project structure",
-      "day": 1,
-      "files": [
         "client/src/lib/components/MobilePipelineCard.svelte",
         "client/src/lib/components/MobileStageCard.svelte",
         "client/src/lib/components/PipelineCreationCard.svelte",
