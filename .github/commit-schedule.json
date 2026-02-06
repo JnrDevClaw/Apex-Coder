@@ -4,29 +4,6 @@
       "message": "Update project structure",
       "day": 1,
       "files": [
-        "client/src/lib/components/questionnaire/IntelligentClarifierStage.svelte",
-        "client/src/lib/components/questionnaire/ProjectContextStage.svelte",
-        "client/src/lib/components/questionnaire/ProjectFlowBuilder.svelte",
-        "client/src/lib/components/questionnaire/QuestionnaireContainer.svelte",
-        "client/src/lib/components/questionnaire/QuestionnaireStage.svelte",
-        "client/src/lib/components/questionnaire/SpecSummary.svelte",
-        "client/src/lib/components/questionnaire/StageProgress.svelte",
-        "client/src/lib/components/questionnaire/UserModeSelector.svelte",
-        "client/src/lib/index.js",
-        "client/src/lib/schemas/pipeline.js",
-        "client/src/lib/schemas/spec.js",
-        "client/src/lib/services/analytics.js",
-        "client/src/lib/services/authService.js",
-        "client/src/lib/services/config.js",
-        "client/src/lib/services/errorLogger.js",
-        "client/src/lib/services/eventStreamManager.js"
-      ],
-      "order": 8
-    },
-    {
-      "message": "Update project structure",
-      "day": 1,
-      "files": [
         "client/src/lib/services/gcpApi.js",
         "client/src/lib/services/payloadSchemaHandler.js",
         "client/src/lib/services/pipelineApi.js",
