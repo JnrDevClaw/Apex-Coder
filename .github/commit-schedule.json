@@ -4,29 +4,6 @@
       "message": "Update infrastructure configuration",
       "day": 1,
       "files": [
-        "infra/deploy/.prettierrc",
-        "infra/deploy/README.md",
-        "infra/deploy/app.js",
-        "infra/deploy/config/config-manager.js",
-        "infra/deploy/config/enhanced-questionnaire.js",
-        "infra/deploy/config/environments/development.js",
-        "infra/deploy/config/environments/production.js",
-        "infra/deploy/config/model-router-config.js",
-        "infra/deploy/config/pricing.json.example",
-        "infra/deploy/examples/model-router-usage.js",
-        "infra/deploy/models/build.js",
-        "infra/deploy/models/cloudformation-stack.js",
-        "infra/deploy/models/db.js",
-        "infra/deploy/models/deployment.js",
-        "infra/deploy/models/index.js",
-        "infra/deploy/models/llm-call-log.js"
-      ],
-      "order": 12
-    },
-    {
-      "message": "Update infrastructure configuration",
-      "day": 1,
-      "files": [
         "infra/deploy/models/organization.js",
         "infra/deploy/models/project.js",
         "infra/deploy/models/user.js",
