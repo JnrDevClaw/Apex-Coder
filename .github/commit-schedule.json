@@ -1,29 +1,6 @@
 {
   "batches": [
     {
-      "message": "Add utility helper functions",
-      "day": 1,
-      "files": [
-        "client/src/lib/utils/componentOptimization.js",
-        "client/src/lib/utils/errorHandling.js",
-        "client/src/lib/utils/i18n.js",
-        "client/src/lib/utils/performance.js",
-        "client/src/lib/utils/pipeline.js",
-        "client/src/lib/utils/resourceValidation.js",
-        "client/src/lib/utils/responsive.js",
-        "client/src/lib/utils/serviceWorker.js",
-        "client/src/routes/api/config/features/+server.js",
-        "client/src/routes/api/waitlist/+server.js",
-        "client/src/routes/build-demo/+page.svelte",
-        "client/src/routes/error-demo/+page.svelte",
-        "client/src/routes/resource-demo/+page.svelte",
-        "client/src/routes/responsive-demo/+page.svelte",
-        "client/src/routes/stage-demo/+page.svelte",
-        "client/src/routes/test-integration/+page.svelte"
-      ],
-      "order": 10
-    },
-    {
       "message": "Setup frontend route pages",
       "day": 1,
       "files": [
