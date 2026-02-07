@@ -1,29 +1,6 @@
 {
   "batches": [
     {
-      "message": "Implement API route handlers",
-      "day": 2,
-      "files": [
-        "server/routes/github-oauth.js",
-        "server/routes/github-webhooks.js",
-        "server/routes/health.js",
-        "server/routes/log-retention.js",
-        "server/routes/migration.js",
-        "server/routes/model-router-metrics.js",
-        "server/routes/model-router.js",
-        "server/routes/organizations.js",
-        "server/routes/pipeline-monitoring.js",
-        "server/routes/pipelines.js",
-        "server/routes/projects-simple.js",
-        "server/routes/projects.js",
-        "server/routes/questionnaire.js",
-        "server/routes/root.js",
-        "server/routes/task-planner.js",
-        "server/routes/test-integration.js"
-      ],
-      "order": 9
-    },
-    {
       "message": "Enhance backend service layer logic",
       "day": 2,
       "files": [
