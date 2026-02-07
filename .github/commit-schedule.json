@@ -4,29 +4,6 @@
       "message": "Update infrastructure configuration",
       "day": 1,
       "files": [
-        "infra/deploy/services/metrics-collector.js",
-        "infra/deploy/services/mock-ai-service.js",
-        "infra/deploy/services/model-router-service.js",
-        "infra/deploy/services/model-router.js",
-        "infra/deploy/services/model-router/README.md",
-        "infra/deploy/services/model-router/cache-manager.js",
-        "infra/deploy/services/model-router/connection-pool.js",
-        "infra/deploy/services/model-router/cost-tracker.js",
-        "infra/deploy/services/model-router/errors.js",
-        "infra/deploy/services/model-router/fast-failure.js",
-        "infra/deploy/services/model-router/health-monitor.js",
-        "infra/deploy/services/model-router/index.js",
-        "infra/deploy/services/model-router/initialize-providers.js",
-        "infra/deploy/services/model-router/integration-example.js",
-        "infra/deploy/services/model-router/logger.js",
-        "infra/deploy/services/model-router/metrics-aggregator.js"
-      ],
-      "order": 18
-    },
-    {
-      "message": "Update infrastructure configuration",
-      "day": 1,
-      "files": [
         "infra/deploy/services/model-router/metrics-collector.js",
         "infra/deploy/services/model-router/model-router.js",
         "infra/deploy/services/model-router/oauth-manager.js",
