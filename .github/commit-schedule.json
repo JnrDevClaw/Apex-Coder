@@ -4,29 +4,6 @@
       "message": "Update infrastructure configuration",
       "day": 1,
       "files": [
-        "infra/deploy/pnpm-lock.yaml",
-        "infra/deploy/routes/README.md",
-        "infra/deploy/routes/admin.js",
-        "infra/deploy/routes/analytics.js",
-        "infra/deploy/routes/audit-dashboard.js",
-        "infra/deploy/routes/audit.js",
-        "infra/deploy/routes/auth.js",
-        "infra/deploy/routes/aws-actions.js",
-        "infra/deploy/routes/aws-credentials.js",
-        "infra/deploy/routes/aws-setup.js",
-        "infra/deploy/routes/builds.js",
-        "infra/deploy/routes/correlation.js",
-        "infra/deploy/routes/deployments.js",
-        "infra/deploy/routes/e2e-validation.js",
-        "infra/deploy/routes/example/index.js",
-        "infra/deploy/routes/gdpr-compliance.js"
-      ],
-      "order": 14
-    },
-    {
-      "message": "Update infrastructure configuration",
-      "day": 1,
-      "files": [
         "infra/deploy/routes/gdpr.js",
         "infra/deploy/routes/github-oauth.js",
         "infra/deploy/routes/github-webhooks.js",
