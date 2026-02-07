@@ -4,29 +4,6 @@
       "message": "Enhance backend service layer logic",
       "day": 2,
       "files": [
-        "server/services/model-router/metrics-aggregator.js",
-        "server/services/model-router/metrics-collector.js",
-        "server/services/model-router/model-router.js",
-        "server/services/model-router/oauth-manager.js",
-        "server/services/model-router/performance-monitor.js",
-        "server/services/model-router/pricing-update-example.js",
-        "server/services/model-router/provider-registry.js",
-        "server/services/model-router/rate-limiter-example.js",
-        "server/services/model-router/rate-limiter-factory.js",
-        "server/services/model-router/request-queue-backup.js",
-        "server/services/model-router/request-queue.js",
-        "server/services/model-router/security-utils.js",
-        "server/services/model-router/streaming-example.js",
-        "server/services/model-router/streaming-parser.js",
-        "server/services/model-router/template-integration-example.js",
-        "server/services/model-router/template-manager-usage.js"
-      ],
-      "order": 13
-    },
-    {
-      "message": "Enhance backend service layer logic",
-      "day": 2,
-      "files": [
         "server/services/model-router/template-manager.js",
         "server/services/model-router/test-basic.js",
         "server/services/model-router/test-cache-integration.js",
