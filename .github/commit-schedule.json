@@ -4,29 +4,6 @@
       "message": "Enhance backend service layer logic",
       "day": 2,
       "files": [
-        "server/services/model-router/test-token-integration.js",
-        "server/services/model-router/test-token-tracker.js",
-        "server/services/model-router/token-tracker-usage-example.js",
-        "server/services/model-router/token-tracker.js",
-        "server/services/model-router/usage-example.js",
-        "server/services/monitoring.js",
-        "server/services/pipeline-migration.js",
-        "server/services/pipeline-orchestrator.js",
-        "server/services/prompt-builder.js",
-        "server/services/prompt-templates-example.js",
-        "server/services/prompt-templates-integration-example.js",
-        "server/services/prompt-templates.js",
-        "server/services/provider-verification.js",
-        "server/services/providers/anthropic.js",
-        "server/services/providers/base-provider.js",
-        "server/services/providers/code-models.js"
-      ],
-      "order": 15
-    },
-    {
-      "message": "Enhance backend service layer logic",
-      "day": 2,
-      "files": [
         "server/services/providers/deepseek-provider.js",
         "server/services/providers/deepseek.js",
         "server/services/providers/demo.js",
