@@ -1,29 +1,6 @@
 {
   "batches": [
     {
-      "message": "Update project structure",
-      "day": 2,
-      "files": [
-        "server/templates/prompts/code-generator.txt",
-        "server/templates/prompts/docs-creator.txt",
-        "server/templates/prompts/file-structure-generator.txt",
-        "server/templates/prompts/normalizer.txt",
-        "server/templates/prompts/prompt-builder.txt",
-        "server/templates/prompts/schema-generator.txt",
-        "server/templates/prompts/structural-validator.txt",
-        "server/templates/prompts/validator.txt",
-        "server/test_output.txt",
-        "server/test_output2.txt",
-        "server/test_output3.txt",
-        "server/test_output4.txt",
-        "server/test_output5.txt",
-        "server/test_output6.txt",
-        "server/test_output7.txt",
-        "server/utils/error-handler.js"
-      ],
-      "order": 18
-    },
-    {
       "message": "Add utility helper functions",
       "day": 2,
       "files": [
