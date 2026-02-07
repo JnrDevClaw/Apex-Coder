@@ -4,29 +4,6 @@
       "message": "Enhance backend service layer logic",
       "day": 2,
       "files": [
-        "server/services/correlation-tracker.js",
-        "server/services/cost-controls.js",
-        "server/services/deployment-error-logger.js",
-        "server/services/deployment-status-tracker.js",
-        "server/services/e2e-demo-validator.js",
-        "server/services/email-notifications.js",
-        "server/services/encryption.js",
-        "server/services/enhanced-spec-processor.js",
-        "server/services/error-notifier.js",
-        "server/services/gcp-deployment.js",
-        "server/services/gdpr-compliance.js",
-        "server/services/github-client.js",
-        "server/services/job-monitor.js",
-        "server/services/job-orchestrator.js",
-        "server/services/job-processor.js",
-        "server/services/job-queue.js"
-      ],
-      "order": 11
-    },
-    {
-      "message": "Enhance backend service layer logic",
-      "day": 2,
-      "files": [
         "server/services/log-retention.js",
         "server/services/metrics-collector.js",
         "server/services/mock-ai-service.js",
