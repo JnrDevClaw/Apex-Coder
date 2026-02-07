@@ -4,29 +4,6 @@
       "message": "Update infrastructure configuration",
       "day": 1,
       "files": [
-        "infra/deploy/models/organization.js",
-        "infra/deploy/models/project.js",
-        "infra/deploy/models/user.js",
-        "infra/deploy/package.json",
-        "infra/deploy/plugins/README.md",
-        "infra/deploy/plugins/auth.js",
-        "infra/deploy/plugins/csrf-protection.js",
-        "infra/deploy/plugins/encryption.js",
-        "infra/deploy/plugins/error-logging.js",
-        "infra/deploy/plugins/job-queue.js",
-        "infra/deploy/plugins/logging.js",
-        "infra/deploy/plugins/mock-auth.js",
-        "infra/deploy/plugins/rate-limit.js",
-        "infra/deploy/plugins/sensible.js",
-        "infra/deploy/plugins/support.js",
-        "infra/deploy/plugins/websocket.js"
-      ],
-      "order": 13
-    },
-    {
-      "message": "Update infrastructure configuration",
-      "day": 1,
-      "files": [
         "infra/deploy/pnpm-lock.yaml",
         "infra/deploy/routes/README.md",
         "infra/deploy/routes/admin.js",
