@@ -4,29 +4,6 @@
       "message": "Update infrastructure configuration",
       "day": 2,
       "files": [
-        "infra/deploy/services/model-router/test-token-tracker.js",
-        "infra/deploy/services/model-router/token-tracker-usage-example.js",
-        "infra/deploy/services/model-router/token-tracker.js",
-        "infra/deploy/services/model-router/usage-example.js",
-        "infra/deploy/services/monitoring.js",
-        "infra/deploy/services/pipeline-migration.js",
-        "infra/deploy/services/pipeline-orchestrator.js",
-        "infra/deploy/services/prompt-builder.js",
-        "infra/deploy/services/prompt-templates-example.js",
-        "infra/deploy/services/prompt-templates-integration-example.js",
-        "infra/deploy/services/prompt-templates.js",
-        "infra/deploy/services/provider-verification.js",
-        "infra/deploy/services/providers/anthropic.js",
-        "infra/deploy/services/providers/base-provider.js",
-        "infra/deploy/services/providers/code-models.js",
-        "infra/deploy/services/providers/deepseek-provider.js"
-      ],
-      "order": 1
-    },
-    {
-      "message": "Update infrastructure configuration",
-      "day": 2,
-      "files": [
         "infra/deploy/services/providers/deepseek.js",
         "infra/deploy/services/providers/demo.js",
         "infra/deploy/services/providers/electronhub-provider.js",
