@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "client/src/lib/utils/performance.test.js",
-        "docs/README.md",
-        "docs/api/README.md",
-        "docs/deployment-automation/README.md",
-        "docs/developer/README.md",
-        "docs/model-router/README.md",
-        "docs/user/README.md",
-        "infra/deploy/test/auth-security.test.js",
-        "infra/deploy/test/helper.js"
-      ],
-      "order": 1
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "infra/deploy/test/integration/aws-action-layer-integration.test.js",
         "infra/deploy/test/integration/aws-credentials-validation.test.js",
         "infra/deploy/test/integration/cloudformation-stack-creation.test.js",
