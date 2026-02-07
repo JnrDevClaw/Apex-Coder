@@ -1,0 +1,16 @@
+{
+  "appName": "SimpleTodo",
+  "description": "A simple to-do list application where users can add, delete, and mark tasks as done.",
+  "features": [
+    "Add task",
+    "Remove task",
+    "Mark task as completed",
+    "Filter tasks (all, active, completed)",
+    "Persist tasks to local storage"
+  ],
+  "techStack": {
+    "frontend": "SvelteKit",
+    "backend": "Node.js",
+    "database": "InMemory"
+  }
+}
