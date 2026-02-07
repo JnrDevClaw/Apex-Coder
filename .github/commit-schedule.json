@@ -4,29 +4,6 @@
       "message": "Implement API route handlers",
       "day": 2,
       "files": [
-        "server/routes/admin.js",
-        "server/routes/analytics.js",
-        "server/routes/audit-dashboard.js",
-        "server/routes/audit.js",
-        "server/routes/auth.js",
-        "server/routes/aws-actions.js",
-        "server/routes/aws-credentials.js",
-        "server/routes/aws-setup.js",
-        "server/routes/builds.js",
-        "server/routes/correlation.js",
-        "server/routes/deployments.js",
-        "server/routes/e2e-validation.js",
-        "server/routes/example/index.js",
-        "server/routes/gcp-integration.js",
-        "server/routes/gdpr-compliance.js",
-        "server/routes/gdpr.js"
-      ],
-      "order": 8
-    },
-    {
-      "message": "Implement API route handlers",
-      "day": 2,
-      "files": [
         "server/routes/github-oauth.js",
         "server/routes/github-webhooks.js",
         "server/routes/health.js",
