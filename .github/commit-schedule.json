@@ -4,29 +4,6 @@
       "message": "Enhance backend service layer logic",
       "day": 2,
       "files": [
-        "server/services/admin-console.js",
-        "server/services/agent-roles.js",
-        "server/services/ai-guidance-engine.js",
-        "server/services/ai-questionnaire-processor.js",
-        "server/services/artifact-storage.js",
-        "server/services/audit-dashboard.js",
-        "server/services/audit-logger.js",
-        "server/services/auth.js",
-        "server/services/aws-action-layer.js",
-        "server/services/aws-ecs-fargate-deployment.js",
-        "server/services/aws-iac-deployment.js",
-        "server/services/aws-lambda-apigateway-deployment.js",
-        "server/services/aws-s3-cloudfront-deployment.js",
-        "server/services/cloudformation-service.js",
-        "server/services/code-generator.js",
-        "server/services/code-parser.js"
-      ],
-      "order": 10
-    },
-    {
-      "message": "Enhance backend service layer logic",
-      "day": 2,
-      "files": [
         "server/services/correlation-tracker.js",
         "server/services/cost-controls.js",
         "server/services/deployment-error-logger.js",
