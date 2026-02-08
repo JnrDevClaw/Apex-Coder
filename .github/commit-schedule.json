@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "server/test/models/build.test.js",
-        "server/test/models/db.test.js",
-        "server/test/models/organization.test.js",
-        "server/test/models/project-sharing.test.js",
-        "server/test/models/project.test.js",
-        "server/test/models/user.test.js",
-        "server/test/plugins/auth-load.test.js",
-        "server/test/plugins/auth-simple.test.js",
-        "server/test/plugins/auth.test.js"
-      ],
-      "order": 12
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "server/test/plugins/support.test.js",
         "server/test/routes/aws-actions.test.js",
         "server/test/routes/aws-credentials.test.js",
