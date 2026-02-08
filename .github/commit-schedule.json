@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "infra/deploy/test/services/redis-integration.test.js",
-        "infra/deploy/test/services/repo-creation-stage.test.js",
-        "infra/deploy/test/services/security-audit-logger.test.js",
-        "infra/deploy/test/services/stage-error-recovery.test.js",
-        "infra/deploy/test/services/structured-logger.test.js",
-        "infra/deploy/test/services/task-planner.test.js",
-        "infra/deploy/test/services/telemetry.test.js",
-        "infra/deploy/test/services/zukijourney-provider.test.js",
-        "infra/test/backup-recovery.test.js"
-      ],
-      "order": 9
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "infra/test/deployment.test.js",
         "infra/test/helper.js",
         "infra/test/infrastructure.test.js",
