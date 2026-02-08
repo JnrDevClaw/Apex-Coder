@@ -1,0 +1,65 @@
+# Example Terraform Variables for AI App Builder Production
+
+# Basic Configuration
+aws_region   = "us-east-1"
+environment  = "production"
+project_name = "ai-app-builder"
+
+# VPC Configuration
+vpc_cidr           = "10.0.0.0/16"
+enable_nat_gateway = true
+enable_vpn_gateway = false
+
+# ECS Configuration
+ecs_cluster_name = "ai-app-builder-production-cluster"
+ecs_task_cpu     = 512
+ecs_task_memory  = 1024
+
+# RDS Configuration
+db_instance_class     = "db.t3.micro"
+db_allocated_storage  = 20
+db_engine_version     = "15.4"
+
+# ElastiCache Configuration
+redis_node_type        = "cache.t3.micro"
+redis_num_cache_nodes  = 1
+
+# S3 Configuration
+s3_versioning_enabled = true
+s3_lifecycle_enabled  = true
+
+# Monitoring Configuration
+enable_detailed_monitoring = true
+log_retention_days        = 30
+
+# Backup Configuration
+backup_retention_period = 7
+backup_window          = "03:00-04:00"
+maintenance_window     = "sun:04:00-sun:05:00"
+
+# Security Configuration
+allowed_cidr_blocks = ["0.0.0.0/0"]
+enable_waf         = true
+
+# Auto Scaling Configuration
+min_capacity              = 1
+max_capacity              = 10
+target_cpu_utilization    = 70
+
+# Domain Configuration (optional)
+# domain_name     = "app.example.com"
+# certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
+
+# Notification Configuration
+notification_email = "admin@example.com"
+
+# Compliance Configuration
+enable_compliance_monitoring = false
+
+# WAF Configuration
+blocked_countries = []  # e.g., ["CN", "RU"] to block China and Russia
+
+# Cost Optimization Configuration
+monthly_budget_limit              = 500
+enable_cost_optimization_rules    = true
+enable_cost_optimization_lambda   = false

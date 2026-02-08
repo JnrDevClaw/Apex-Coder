@@ -1,0 +1,90 @@
+[
+  {
+    "filename": "package.json",
+    "purpose": "Project configuration",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "{\"filename\":\"package.json\",\"purpose\":\"Project configuration\",\"schema\":{},\"imports\":{\"filePaths\":[],\"functions\":[]},\"generatedPrompt\":\"Generate package.json for a SvelteKit + Fastify app\",\"functions\":[]}",
+    "functions": []
+  },
+  {
+    "filename": "src/app.js",
+    "purpose": "Fastify server entry point",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "{\"filename\":\"src/app.js\",\"purpose\":\"Fastify server entry point\",\"schema\":{},\"imports\":{\"filePaths\":[\"./routes/tasks\",\"./lib/db\"],\"functions\":[{\"functionName\":\"registerRoutes\",\"functionPurpose\":\"Register API routes\",\"methods\":[]}]},\"generatedPrompt\":\"Generate Fastify server with CORS and task routes\",\"functions\":[{\"functionName\":\"start\",\"functionPurpose\":\"Start the server\",\"methods\":[{\"method\":\"listen\",\"usecase\":\"Start listening on port\"}]}]}",
+    "functions": []
+  },
+  {
+    "filename": "src/routes/tasks.js",
+    "purpose": "Task API routes with CRUD operations",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "{\"filename\":\"src/routes/tasks.js\",\"purpose\":\"Task API routes with CRUD operations\",\"schema\":{\"Task\":{\"id\":\"integer\",\"title\":\"string\",\"completed\":\"boolean\"}},\"imports\":{\"filePaths\":[\"../lib/db\"],\"functions\":[]},\"generatedPrompt\":\"Generate Fastify routes for task CRUD\",\"functions\":[{\"functionName\":\"getTasks\",\"functionPurpose\":\"Get all tasks\",\"methods\":[{\"method\":\"GET\",\"usecase\":\"List tasks\"}]},{\"functionName\":\"createTask\",\"functionPurpose\":\"Create a task\",\"methods\":[{\"method\":\"POST\",\"usecase\":\"Add task\"}]},{\"functionName\":\"updateTask\",\"functionPurpose\":\"Update a task\",\"methods\":[{\"method\":\"PUT\",\"usecase\":\"Toggle completion\"}]},{\"functionName\":\"deleteTask\",\"functionPurpose\":\"Delete a task\",\"methods\":[{\"method\":\"DELETE\",\"usecase\":\"Remove task\"}]}]}",
+    "functions": []
+  },
+  {
+    "filename": "src/lib/db.js",
+    "purpose": "SQLite database connection and initialization",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "{\"filename\":\"src/lib/db.js\",\"purpose\":\"SQLite database connection\",\"schema\":{\"tasks\":{\"id\":\"INTEGER PRIMARY KEY\",\"title\":\"VARCHAR\",\"completed\":\"BOOLEAN\"}},\"imports\":{\"filePaths\":[],\"functions\":[]},\"generatedPrompt\":\"Generate SQLite database wrapper with task table\",\"functions\":[{\"functionName\":\"initDb\",\"functionPurpose\":\"Initialize database\",\"methods\":[]}]}",
+    "functions": []
+  },
+  {
+    "filename": "src/lib/utils.js",
+    "purpose": "Utility functions",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "Generate code for this file",
+    "functions": []
+  },
+  {
+    "filename": "frontend/src/routes/+page.svelte",
+    "purpose": "Main todo list component",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "Generate code for this file",
+    "functions": []
+  },
+  {
+    "filename": "frontend/src/lib/stores.js",
+    "purpose": "Svelte stores for state management",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "Generate code for this file",
+    "functions": []
+  },
+  {
+    "filename": "frontend/src/lib/api.js",
+    "purpose": "API client functions",
+    "schema": {},
+    "imports": {
+      "filePaths": [],
+      "functions": []
+    },
+    "generatedPrompt": "Generate code for this file",
+    "functions": []
+  }
+]

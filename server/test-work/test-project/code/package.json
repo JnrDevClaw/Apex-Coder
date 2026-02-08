@@ -1,0 +1,14 @@
+{
+  "name": "simple-todo",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "fastify": "^4.24.0",
+    "@fastify/cors": "^8.4.0",
+    "better-sqlite3": "^9.2.0"
+  }
+}

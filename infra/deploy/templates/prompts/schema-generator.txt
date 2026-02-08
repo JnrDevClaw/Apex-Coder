@@ -1,0 +1,30 @@
+ROLE:
+You are an expert schema designer.
+
+TASK:
+Convert the docs into a precise schema.json for DB models, API shapes, validators, and types. Also append a 'Database Schema' section to docs.md (machine-generated, human-readable).
+
+INPUT:
+Documentation:
+{{docs_md}}
+
+REQUIREMENTS:
+- Normalized relational structures (or collections for document DBs), types, indices.
+- Validation rules for each field.
+- Clear relationships between entities.
+- Appropriate data types for each field.
+- Constraints and default values where applicable.
+
+RULES:
+- Generate a complete, valid JSON schema.
+- Include all entities mentioned in the documentation.
+- Define primary keys, foreign keys, and indices.
+- Specify validation rules (required, min/max length, patterns, etc.).
+- Use appropriate data types (string, number, boolean, date, etc.).
+- Document relationships between entities.
+- Include any necessary enums or constants.
+
+EXPECTED_OUTPUT:
+Two outputs:
+1. schema.json - A structured JSON schema with all database models, API shapes, and validation rules.
+2. An updated docs.md with a new "Database Schema" section appended, presenting the schema in a human-readable format.

@@ -1,0 +1,14 @@
+/_app/immutable/*
+  Cache-Control: public, immutable, max-age=31536000
+
+/_app/version.json
+  Cache-Control: no-cache
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/*.css
+  Content-Type: text/css; charset=utf-8

@@ -1,0 +1,9 @@
+{
+  "appName": "SimpleTodo",
+  "description": "A simple to-do list",
+  "features": [
+    "Add task",
+    "Remove task",
+    "Mark complete"
+  ]
+}

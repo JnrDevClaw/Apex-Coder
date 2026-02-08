@@ -1,0 +1,71 @@
+# ============================
+# 1. BUILD STAGE (PNPM ONLY)
+# ============================
+# NOTE: Build with --platform=linux/amd64 when on Windows:
+# docker build --platform=linux/amd64 -f infra/Dockerfile.workers.prod -t workers:latest .
+FROM node:18-alpine AS builder
+
+WORKDIR /workspace
+
+# Install pnpm globally
+RUN npm install -g pnpm@10.24.0
+
+# Create .npmrc to ensure Linux-native behavior (no Windows symlinks)
+RUN echo "node-linker=hoisted" > .npmrc && \
+    echo "shamefully-hoist=true" >> .npmrc && \
+    echo "symlink=false" >> .npmrc
+
+# Copy workspace config first
+COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
+
+# Copy package.json files for dependency resolution
+COPY workers/package.json ./workers/
+COPY server/package.json ./server/
+
+# Install dependencies - runs natively in Linux container
+RUN pnpm install --no-frozen-lockfile
+
+# Copy source code
+COPY workers ./workers
+COPY server ./server
+
+# ============================
+# 2. RUNTIME STAGE
+# ============================
+FROM node:18-alpine AS production
+
+WORKDIR /app
+
+# Install pnpm and Docker CLI for worker containers
+RUN npm install -g pnpm@10.24.0 && \
+    apk add --no-cache docker-cli
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+# Add nodejs user to docker group for Docker socket access
+RUN addgroup nodejs docker || true
+
+# Copy workspace files
+COPY --from=builder /workspace/pnpm-workspace.yaml ./
+COPY --from=builder /workspace/package.json ./
+
+# Copy workers folder + deps
+COPY --from=builder --chown=nodejs:nodejs /workspace/workers ./workers
+
+# Set working directory to workers
+WORKDIR /app/workers
+
+# Switch to non-root user
+USER nodejs
+
+# Expose port
+EXPOSE 3002
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:3002/health || exit 1
+
+# Start application
+CMD ["pnpm", "start"]

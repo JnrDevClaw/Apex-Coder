@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - AI App Builder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #0A0A0C;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      text-align: center;
+      max-width: 500px;
+    }
+    
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      opacity: 0.6;
+    }
+    
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 32px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #3AB8FF;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+    
+    .button:hover {
+      background: #2A9FE6;
+      transform: translateY(-1px);
+    }
+    
+    .button:active {
+      transform: translateY(0);
+    }
+    
+    .status {
+      margin-top: 24px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .online {
+      color: #7BFFB2;
+    }
+    
+    .offline {
+      color: #FF4C88;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path>
+    </svg>
+    
+    <h1>You're Offline</h1>
+    <p>
+      It looks like you've lost your internet connection. Some features may not be available until you're back online.
+    </p>
+    
+    <button class="button" onclick="window.location.reload()">
+      Try Again
+    </button>
+    
+    <div class="status">
+      Connection status: <span id="status" class="offline">Offline</span>
+    </div>
+  </div>
+  
+  <script>
+    // Monitor online/offline status
+    function updateStatus() {
+      const statusEl = document.getElementById('status');
+      if (navigator.onLine) {
+        statusEl.textContent = 'Online';
+        statusEl.className = 'online';
+        // Auto-reload when back online
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      } else {
+        statusEl.textContent = 'Offline';
+        statusEl.className = 'offline';
+      }
+    }
+    
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    
+    // Check status on load
+    updateStatus();
+  </script>
+</body>
+</html>

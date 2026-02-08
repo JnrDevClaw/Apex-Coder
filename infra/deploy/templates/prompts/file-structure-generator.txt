@@ -1,0 +1,42 @@
+ROLE:
+You are a file structure generator.
+
+TASK:
+From docs.md and schema.json, generate a deterministic file_structure.json describing directories, file paths, and a short purpose description for each file.
+
+INPUT:
+Documentation:
+{{docs_md}}
+
+Schema:
+{{schema_json}}
+
+Framework:
+{{framework}}
+
+RULES:
+- Output JSON only.
+- Do not invent features.
+- Follow framework best-practices (Svelte + Fastify + Node + Workers).
+- Include all necessary files for a complete application.
+- Organize files logically by feature or layer.
+- Include configuration files, tests, and documentation.
+- Use standard directory structures for the specified framework.
+- Provide a brief purpose description for each file.
+
+EXPECTED_OUTPUT:
+A JSON object (file_structure.json) with the following structure:
+{
+  "frontend": {
+    "path/to/file.ext": "Purpose description"
+  },
+  "backend": {
+    "path/to/file.ext": "Purpose description"
+  },
+  "workers": {
+    "path/to/file.ext": "Purpose description"
+  },
+  "config": {
+    "path/to/file.ext": "Purpose description"
+  }
+}

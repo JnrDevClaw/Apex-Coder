@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Cache - AI App Builder</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0A0A0C;
+            color: #fff;
+        }
+        .container {
+            background: #101218;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        h1 {
+            color: #3AB8FF;
+            margin-top: 0;
+        }
+        button {
+            background: #3AB8FF;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px 10px 10px 0;
+        }
+        button:hover {
+            background: #2A9FE8;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(58, 184, 255, 0.1);
+            border: 1px solid rgba(58, 184, 255, 0.3);
+        }
+        .success {
+            background: rgba(123, 255, 178, 0.1);
+            border-color: rgba(123, 255, 178, 0.3);
+            color: #7BFFB2;
+        }
+        .error {
+            background: rgba(255, 76, 136, 0.1);
+            border-color: rgba(255, 76, 136, 0.3);
+            color: #FF4C88;
+        }
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .steps {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Clear Cache & Fix Questionnaire</h1>
+        
+        <p>If the questionnaire page is not loading, follow these steps:</p>
+        
+        <div class="steps">
+            <ol>
+                <li>Click the button below to clear all caches</li>
+                <li>Wait for the success message</li>
+                <li>The page will automatically reload</li>
+                <li>Navigate to <code>/questionnaire</code></li>
+            </ol>
+        </div>
+        
+        <button onclick="clearAllCaches()">Clear All Caches & Reload</button>
+        <button onclick="unregisterServiceWorker()">Unregister Service Worker</button>
+        <button onclick="clearLocalStorage()">Clear LocalStorage</button>
+        <button onclick="fullReset()">Full Reset (All Above)</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script>
+        const statusDiv = document.getElementById('status');
+
+        function showStatus(message, type = 'info') {
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = message;
+        }
+
+        async function clearAllCaches() {
+            try {
+                showStatus('Clearing caches...', 'info');
+                
+                const cacheNames = await caches.keys();
+                await Promise.all(
+                    cacheNames.map(name => {
+                        console.log('Deleting cache:', name);
+                        return caches.delete(name);
+                    })
+                );
+                
+                showStatus(`✅ Successfully cleared ${cacheNames.length} cache(s). Reloading...`, 'success');
+                
+                setTimeout(() => {
+                    window.location.href = '/questionnaire';
+                }, 1500);
+            } catch (error) {
+                showStatus(`❌ Error clearing caches: ${error.message}`, 'error');
+            }
+        }
+
+        async function unregisterServiceWorker() {
+            try {
+                showStatus('Unregistering service workers...', 'info');
+                
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(
+                    registrations.map(reg => {
+                        console.log('Unregistering:', reg);
+                        return reg.unregister();
+                    })
+                );
+                
+                showStatus(`✅ Successfully unregistered ${registrations.length} service worker(s). Reloading...`, 'success');
+                
+                setTimeout(() => {
+                    location.reload(true);
+                }, 1500);
+            } catch (error) {
+                showStatus(`❌ Error unregistering service workers: ${error.message}`, 'error');
+            }
+        }
+
+        function clearLocalStorage() {
+            try {
+                showStatus('Clearing localStorage...', 'info');
+                
+                const keys = Object.keys(localStorage);
+                localStorage.clear();
+                
+                showStatus(`✅ Successfully cleared ${keys.length} localStorage item(s).`, 'success');
+            } catch (error) {
+                showStatus(`❌ Error clearing localStorage: ${error.message}`, 'error');
+            }
+        }
+
+        async function fullReset() {
+            try {
+                showStatus('Performing full reset...', 'info');
+                
+                // Clear caches
+                const cacheNames = await caches.keys();
+                await Promise.all(cacheNames.map(name => caches.delete(name)));
+                
+                // Unregister service workers
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(registrations.map(reg => reg.unregister()));
+                
+                // Clear localStorage
+                localStorage.clear();
+                
+                // Clear sessionStorage
+                sessionStorage.clear();
+                
+                showStatus('✅ Full reset complete! Reloading in 2 seconds...', 'success');
+                
+                setTimeout(() => {
+                    window.location.href = '/questionnaire';
+                }, 2000);
+            } catch (error) {
+                showStatus(`❌ Error during full reset: ${error.message}`, 'error');
+            }
+        }
+
+        // Show initial instructions
+        showStatus('Click a button above to fix caching issues.', 'info');
+    </script>
+</body>
+</html>

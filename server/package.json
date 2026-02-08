@@ -11,8 +11,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "start": "fastify start -l info -a 0.0.0.0 -p 3000 app.js",
-    "dev": "fastify start -w -l info -P -a 0.0.0.0 -p 3000 app.js",
+    "start": "fastify start -l info -a 0.0.0.0 -p 3000 -T 60000 app.js",
+    "dev": "fastify start -w -l info -P -a 0.0.0.0 -p 3000 -T 60000 app.js",
     "lint": "eslint .",
     "format": "prettier --write .",
     "clean": "rm -rf node_modules coverage",
@@ -71,7 +71,6 @@
     "prettier": "^3.2.5",
     "supertest": "^7.0.0"
   },
-
   "jest": {
     "testEnvironment": "node",
     "testMatch": [

@@ -1,0 +1,23 @@
+{
+  "appName": "SimpleTodo",
+  "description": "A simple to-do list application",
+  "features": [
+    "Add task with title",
+    "Remove task",
+    "Mark task as completed",
+    "Filter tasks (all, active, completed)",
+    "Persist tasks to local storage"
+  ],
+  "techStack": {
+    "frontend": "SvelteKit",
+    "backend": "Node.js with Fastify",
+    "database": "SQLite"
+  },
+  "authentication": "none",
+  "multiUser": false,
+  "taskProperties": [
+    "title",
+    "completed",
+    "createdAt"
+  ]
+}

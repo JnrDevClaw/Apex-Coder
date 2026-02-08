@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "package.json",
+      "purpose": "Project configuration",
+      "validated": true
+    },
+    {
+      "path": "src/app.js",
+      "purpose": "Fastify server entry point",
+      "validated": true
+    },
+    {
+      "path": "src/routes/tasks.js",
+      "purpose": "Task API routes with CRUD operations",
+      "validated": true
+    },
+    {
+      "path": "src/lib/db.js",
+      "purpose": "SQLite database connection and initialization",
+      "validated": true
+    },
+    {
+      "path": "src/lib/utils.js",
+      "purpose": "Utility functions",
+      "validated": true
+    },
+    {
+      "path": "frontend/src/routes/+page.svelte",
+      "purpose": "Main todo list component",
+      "validated": true
+    },
+    {
+      "path": "frontend/src/lib/stores.js",
+      "purpose": "Svelte stores for state management",
+      "validated": true
+    },
+    {
+      "path": "frontend/src/lib/api.js",
+      "purpose": "API client functions",
+      "validated": true
+    }
+  ]
+}

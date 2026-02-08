@@ -1,0 +1,38 @@
+# Development Dockerfile for Backend
+# This version is for local development with hot-reload
+# NOTE: Build with --platform=linux/amd64 when on Windows for EC2 deployment
+
+FROM node:18
+
+WORKDIR /workspace
+
+# Install pnpm globally (matching local version)
+RUN npm install -g pnpm@10.24.0
+
+# Create .npmrc to ensure Linux-native behavior (no Windows symlinks)
+RUN echo "node-linker=hoisted" > .npmrc && \
+    echo "shamefully-hoist=true" >> .npmrc && \
+    echo "symlink=false" >> .npmrc
+
+# Copy workspace configuration
+COPY pnpm-lock.yaml package.json pnpm-workspace.yaml ./
+
+# Copy only backend-related workspace package.json files
+COPY server/package.json ./server/
+COPY workers/package.json ./workers/
+
+# Install all dependencies - runs natively in Linux container
+RUN pnpm install --no-frozen-lockfile
+
+# Copy server source code
+COPY server ./server/
+COPY workers ./workers/
+
+# Set working directory to server
+WORKDIR /workspace/server
+
+# Expose port
+EXPOSE 3000
+
+# Start development server with hot-reload
+CMD ["pnpm", "dev"]

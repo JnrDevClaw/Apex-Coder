@@ -18,6 +18,7 @@
     "aws-sdk": "^2.1691.0",
     "bullmq": "^5.63.0",
     "dockerode": "^4.0.2",
+    "dotenv": "^16.4.5",
     "fastify": "^5.0.0",
     "fastify-plugin": "^5.0.0",
     "ioredis": "^5.8.2",

@@ -1,0 +1,71 @@
+{
+  "database": {
+    "tables": {
+      "tasks": {
+        "columns": {
+          "id": {
+            "type": "INTEGER",
+            "primaryKey": true,
+            "autoIncrement": true
+          },
+          "title": {
+            "type": "VARCHAR(255)",
+            "notNull": true
+          },
+          "completed": {
+            "type": "BOOLEAN",
+            "default": false
+          },
+          "created_at": {
+            "type": "TIMESTAMP",
+            "default": "CURRENT_TIMESTAMP"
+          }
+        },
+        "indexes": [
+          "idx_tasks_completed"
+        ]
+      }
+    }
+  },
+  "resources": {
+    "Task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "completed"
+      ]
+    }
+  },
+  "responses": {
+    "TaskList": {
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/resources/Task"
+          }
+        },
+        "total": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

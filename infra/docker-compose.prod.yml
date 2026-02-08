@@ -1,0 +1,57 @@
+version: '3.8'
+
+# Note: Frontend is deployed separately and not included in this compose file
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend.prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - REDIS_URL=redis://redis:6379
+    restart: unless-stopped
+    depends_on:
+      - workers
+      - redis
+    networks:
+      - ai-app-builder
+
+  workers:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.workers.prod
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+      - PORT=3002
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    depends_on:
+      - redis
+    networks:
+      - ai-app-builder
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - ai-app-builder
+
+volumes:
+  redis_data:
+
+networks:
+  ai-app-builder:
+    driver: bridge

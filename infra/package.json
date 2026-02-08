@@ -1,0 +1,37 @@
+{
+  "name": "ai-app-builder-infrastructure-tests",
+  "version": "1.0.0",
+  "description": "Infrastructure and deployment tests for AI App Builder",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:infrastructure": "jest test/infrastructure.test.js",
+    "test:deployment": "jest test/deployment.test.js",
+    "test:backup": "jest test/backup-recovery.test.js",
+    "test:monitoring": "jest test/monitoring.test.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "scripts/**/*.sh",
+      "terraform/**/*.tf"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "infrastructure",
+    "terraform",
+    "aws",
+    "deployment",
+    "testing"
+  ],
+  "author": "AI App Builder Team",
+  "license": "MIT"
+}
