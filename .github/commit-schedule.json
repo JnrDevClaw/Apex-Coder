@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "infra/test/deployment.test.js",
-        "infra/test/helper.js",
-        "infra/test/infrastructure.test.js",
-        "infra/test/integration.test.js",
-        "infra/test/monitoring.test.js",
-        "infra/test/run-tests.sh",
-        "server/test/auth-security.test.js",
-        "server/test/helper.js",
-        "server/test/integration/aws-action-layer-integration.test.js"
-      ],
-      "order": 10
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "server/test/integration/aws-credentials-validation.test.js",
         "server/test/integration/cloudformation-stack-creation.test.js",
         "server/test/integration/email-notifications-integration.test.js",
