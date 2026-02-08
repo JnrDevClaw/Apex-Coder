@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "server/test/services/pipeline-stage-integration.test.js",
-        "server/test/services/prompt-templates.test.js",
-        "server/test/services/provider-verification.test.js",
-        "server/test/services/questionnaire-validator.test.js",
-        "server/test/services/redis-integration.test.js",
-        "server/test/services/repo-creation-stage.test.js",
-        "server/test/services/security-audit-logger.test.js",
-        "server/test/services/stage-error-recovery.test.js",
-        "server/test/services/structured-logger.test.js"
-      ],
-      "order": 18
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "server/test/services/task-planner.test.js",
         "server/test/services/telemetry.test.js",
         "server/test/services/zukijourney-provider.test.js",
