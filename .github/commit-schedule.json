@@ -4,22 +4,6 @@
       "message": "Add unit and integration tests",
       "day": 3,
       "files": [
-        "server/test/services/file-structure-creation.test.js",
-        "server/test/services/gcp-deployment.test.js",
-        "server/test/services/github-models-provider.test.js",
-        "server/test/services/huggingface-inference.test.js",
-        "server/test/services/huggingface-provider.test.js",
-        "server/test/services/job-orchestrator.test.js",
-        "server/test/services/job-processor.test.js",
-        "server/test/services/job-queue.test.js",
-        "server/test/services/log-retention.test.js"
-      ],
-      "order": 16
-    },
-    {
-      "message": "Add unit and integration tests",
-      "day": 3,
-      "files": [
         "server/test/services/metrics-collector.test.js",
         "server/test/services/model-router-initialization.test.js",
         "server/test/services/model-router.test.js",
