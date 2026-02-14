@@ -535,6 +535,30 @@ terraform plan
 terraform apply
 ```
 
+### GCP Deployment Architecture
+
+#### Service Integration
+- **Cloud Run**: Containerized application deployment with automatic scaling
+- **Cloud Functions**: Serverless functions for event-driven processing  
+- **Cloud Storage**: Artifact storage for build outputs and specifications
+- **Cloud SQL**: Managed PostgreSQL database for production workloads
+- **Cloud Memorystore**: Redis-compatible cache for job queues
+- **Cloud Build**: CI/CD pipeline integration for automated deployments
+
+#### Scalability Planning
+- **Horizontal Scaling**: Auto-scaling based on CPU/memory utilization and request rate
+- **Concurrency Limits**: Configurable concurrent build limits per project
+- **Resource Quotas**: GCP quota management for cost control
+- **Load Balancing**: Global load balancing for multi-region deployments
+- **Cold Start Optimization**: Pre-warmed instances for critical paths
+
+#### Operational Considerations
+- **Monitoring**: Cloud Monitoring and Cloud Logging integration
+- **Alerting**: Custom metrics and alerting policies for build failures
+- **Cost Optimization**: Spot instances for non-critical workloads
+- **Security**: IAM roles, VPC Service Controls, and private networking
+- **Backup & Recovery**: Automated backups with point-in-time recovery
+
 ## 📚 API Documentation
 
 ### Enhanced Questionnaire Endpoints
