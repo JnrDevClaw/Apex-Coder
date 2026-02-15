@@ -653,3 +653,209 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ✅ Comprehensive audit logging
 
 ---
+
+## 🏗️ Senior-Level Architectural Deep Dive
+
+### System Architecture Diagram
+
+```mermaid
+graph TD
+    A[Frontend<br/>SvelteKit] -->|HTTP/WebSocket| B[API Gateway<br/>Fastify]
+    B --> C[Auth Service<br/>JWT/OAuth2]
+    B --> D[Questionnaire Service]
+    B --> E[AI Orchestration Service]
+    B --> F[Build Management Service]
+    
+    D --> G[(PostgreSQL<br/>User Data)]
+    E --> H[Model Router]
+    E --> I[(Redis<br/>Job Queue)]
+    
+    H --> J[HuggingFace Provider]
+    H --> K[OpenRouter Provider]
+    H --> L[DeepSeek Provider]
+    H --> M[Anthropic Provider]
+    H --> N[Gemini Provider]
+    
+    I --> O[Worker Pool<br/>Node.js]
+    O --> P[Code Generation Engine]
+    O --> Q[Test Runner]
+    O --> R[Deployment Service]
+    
+    P --> S[(File System<br/>Artifacts)]
+    R --> T[GitHub API]
+    R --> U[GCP Cloud Run]
+    
+    B --> V[Monitoring Service]
+    V --> W[Prometheus Metrics]
+    V --> X[Grafana Dashboard]
+    V --> Y[Sentry Error Tracking]
+```
+
+### AI Fault Tolerance Deep Dive
+
+**Exactly-Once vs At-Least-Once Delivery Semantics:**
+- **At-Least-Once**: Default behavior for AI generations to ensure no data loss
+- **Exactly-Once**: Implemented via idempotency keys for critical operations (deployment, billing)
+- **Idempotency Key Generation**: UUIDv4 with timestamp prefix for temporal ordering
+- **Validation**: Redis-based idempotency store with TTL matching business logic
+
+**Replay Mechanism Implementation:**
+- **Build Artifacts**: All intermediate artifacts stored with versioned paths
+- **Stage Replay**: Individual pipeline stages can be replayed independently
+- **Full Pipeline Replay**: Complete rebuild capability with consistent outputs
+- **Cost Optimization**: Cache-aware replay that skips unchanged stages
+
+**LLM Provider Failure Handling:**
+- **Health Checks**: Active monitoring of provider availability and response times
+- **Automatic Fallback**: Seamless transition to backup providers on failure
+- **Cost-Aware Routing**: Preference hierarchy based on cost/performance ratio
+- **Circuit Breaker**: Temporary disablement of failing providers
+
+### Security Architecture
+
+**Threat Model:**
+1. **Malicious Prompt Injection**: Sanitized inputs and structured prompt templates
+2. **AI Provider Compromise**: Isolated worker processes with minimal privileges
+3. **Generated Code Exploitation**: Static analysis and sandboxed execution
+4. **Data Exfiltration**: Network egress filtering and artifact scanning
+5. **Billing Abuse**: Per-user quotas and anomaly detection
+
+**Cryptographic Implementation:**
+- **End-to-End Encryption**: User data encrypted at rest with AES-256-GCM
+- **Key Management**: HashiCorp Vault integration for secret management
+- **Signature Verification**: HMAC-SHA256 for webhook payload verification
+- **Certificate Pinning**: Strict TLS validation for all external communications
+
+**Rate Limiting and Circuit Breakers:**
+- **Token Bucket Algorithm**: Per-user and global rate limiting
+- **Adaptive Throttling**: Dynamic limits based on system load
+- **Provider Circuit Breakers**: Automatic disablement of unhealthy AI providers
+- **Emergency Shutdown**: Graceful degradation during system overload
+
+### Operational Excellence
+
+**Monitoring Dashboard Specifications:**
+- **Real-time Metrics**: Build queue length, AI provider latency, success rates
+- **Cost Tracking**: Per-user and per-project AI consumption metrics
+- **Quality Indicators**: Code generation success rate, test pass rate, deployment success
+- **User Analytics**: Feature usage patterns and conversion funnels
+
+**Alerting Thresholds and Runbooks:**
+- **Critical Alerts**: >95% queue utilization, >5min provider latency, <90% success rate
+- **Warning Alerts**: >80% queue utilization, >2min provider latency, <95% success rate
+- **Automated Remediation**: Auto-scaling, provider failover, resource cleanup
+- **Incident Response**: Escalation procedures and post-mortem templates
+
+**Backup and Restore Procedures:**
+- **Point-in-Time Recovery**: PostgreSQL WAL archiving with 15-minute RPO
+- **Artifact Versioning**: Immutable build artifacts with cryptographic hashes
+- **Disaster Recovery**: Multi-region deployment with automated failover
+- **Data Retention**: Configurable retention policies with GDPR compliance
+
+**Capacity Planning Guidelines:**
+- **Concurrent Builds**: 100 concurrent builds per 4-core, 16GB RAM instance
+- **AI Provider Quotas**: Conservative rate limiting to prevent throttling
+- **Storage Requirements**: 1GB per active user per month (artifacts + logs)
+- **Network Bandwidth**: 10MB/s per concurrent build for artifact transfer
+
+### Scaling Patterns
+
+**Horizontal Scaling Strategies:**
+- **Stateless Services**: API gateway and orchestration services scale horizontally
+- **Worker Pool Scaling**: Dynamic worker count based on queue depth
+- **Database Read Replicas**: Separate read replicas for analytics queries
+- **Cache Layer**: Redis cluster for session and idempotency storage
+
+**Sharding Strategy:**
+- **User-Based Sharding**: Users assigned to specific worker pools
+- **Project-Based Sharding**: Large projects get dedicated resources
+- **Provider-Based Routing**: AI requests routed to optimal provider regions
+- **Geographic Distribution**: Edge caching for global user base
+
+**Queue Backpressure Handling:**
+- **Priority Queues**: Critical operations (deployments) get higher priority
+- **Fair Scheduling**: Prevent single user from monopolizing resources
+- **Graceful Degradation**: Reduce non-critical features under load
+- **Resource Quotas**: Hard limits on CPU, memory, and network per build
+
+**Performance Benchmarks:**
+- **Cold Start**: 15-30 seconds for complete pipeline initialization
+- **Warm Build**: 2-5 minutes for typical application generation
+- **AI Latency**: 30-120 seconds per LLM call depending on provider
+- **Throughput**: 50 concurrent builds per standard deployment
+
+### Integration Patterns
+
+**Message Queue Integration:**
+- **BullMQ**: Primary job queue with Redis backend
+- **Kafka Alternative**: Event streaming for high-volume deployments
+- **SQS Compatibility**: AWS integration for cloud-native deployments
+- **Dead Letter Queues**: Failed job isolation and retry mechanisms
+
+**Batch Delivery Patterns:**
+- **Webhook Batching**: Multiple events delivered in single HTTP request
+- **Async Processing**: Long-running operations return immediately with status endpoint
+- **Progress Updates**: WebSocket streams for real-time build progress
+- **Result Aggregation**: Combined results from multiple AI providers
+
+**Webhook Signature Verification:**
+```javascript
+const crypto = require('crypto');
+
+function verifyWebhookSignature(payload, signature, secret) {
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(payload)
+    .digest('hex');
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(`sha256=${expectedSignature}`)
+  );
+}
+```
+
+**Replay API Usage:**
+```bash
+# Replay specific build stage
+POST /api/v1/builds/{buildId}/replay
+{
+  "stage": "code-generation",
+  "force": true,
+  "preserveArtifacts": true
+}
+
+# Replay entire pipeline
+POST /api/v1/builds/{buildId}/replay
+{
+  "stage": "all",
+  "incremental": false
+}
+```
+
+**AI Provider Integration Example:**
+```javascript
+// Multi-provider fallback pattern
+async function generateCode(specs, options = {}) {
+  const providers = [
+    { name: 'openrouter', priority: 1, cost: 'low' },
+    { name: 'deepseek', priority: 2, cost: 'medium' },
+    { name: 'anthropic', priority: 3, cost: 'high' }
+  ];
+  
+  for (const provider of providers) {
+    try {
+      const result = await aiProviders[provider.name].generate(specs, options);
+      if (result.success) {
+        return { ...result, provider: provider.name };
+      }
+    } catch (error) {
+      logger.warn(`Provider ${provider.name} failed:`, error.message);
+      continue;
+    }
+  }
+  
+  throw new Error('All AI providers failed');
+}
+```
+
+---
